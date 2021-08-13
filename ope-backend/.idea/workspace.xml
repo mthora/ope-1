@@ -2,26 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="202d7476-74ff-4faa-a64d-5d7b688dd7b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/config/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/config/db_base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/config/db_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/entities/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/entities/users.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/repo/UserRepository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/repo/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/dtos/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/dtos/users.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infrastructure/repo/user/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infrastructure/repo/user/user_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infrastructure/repo/user/user_repository_interface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flake8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ope-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ope-backend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.pre-commit-config.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.pylintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/repo/UserRepository.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +39,12 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AS-Informatica\Desktop\prod\ope-projeto\ope-1\ope-backend\src\infrastructure\repo\user" />
+      <recent name="C:\Users\AS-Informatica\Desktop\prod\ope-projeto\ope-1\ope-backend\src\domain\dtos" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
