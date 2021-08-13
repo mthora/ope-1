@@ -1,1 +1,3 @@
 /ope-backend/venv/
+/ope-backend/storage.db
+**/__pycache__
