@@ -1,39 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f87cabd-7e39-44a9-acc2-3627de5d7169" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.flake8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.pre-commit-config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.pylintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+    <list default="true" id="202d7476-74ff-4faa-a64d-5d7b688dd7b1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infrastructure/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infrastructure/config/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infrastructure/config/db_base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infrastructure/config/db_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infrastructure/entities/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infrastructure/entities/users.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infrastructure/repo/UserRepository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infrastructure/repo/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flake8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/ope-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ope-backend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/controllers/UserController.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/controllers/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/errors/Handlers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/errors/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/home/Routes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/home/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/boundaries/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/boundaries/user/CreateUserInput.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/handlers/CreateUserHandler.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/handlers/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/queries/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/queries/create_user/CreateUserQuery.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/queries/create_user/validation/CreateUserQueryValidation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/use_cases/UserUseCase.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/use_cases/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/user/UserRepository.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/user/scripts/CreateUserAsync.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pre-commit-config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pylintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1wgLC6IpWQzajbeEbArDOW1tYIG" />
+  <component name="ProjectId" id="1wgNLpmUICmgqs38CVBmMorrcRq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -66,11 +54,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1f87cabd-7e39-44a9-acc2-3627de5d7169" name="Changes" comment="" />
-      <created>1628875157622</created>
+      <changelist id="202d7476-74ff-4faa-a64d-5d7b688dd7b1" name="Changes" comment="" />
+      <created>1628876219022</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1628875157622</updated>
+      <updated>1628876219022</updated>
     </task>
     <servers />
   </component>
