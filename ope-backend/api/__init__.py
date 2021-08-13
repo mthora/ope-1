@@ -2,8 +2,8 @@ from flask import Flask
 from api.config import TestingConfig, DevelopmentConfig, ProductionConfig
 import os
 # blueprints
-from api.errors.handlers import errors
-from api.home.routes import home
+from api.errors.Handlers import errors
+from api.home.Routes import home
 
 
 app = Flask(__name__)
@@ -18,8 +18,8 @@ def create_app():
     app.config.from_object(DevelopmentConfig if os.environ.get(
         "PRODUCTION").lower() == 'true' else DevelopmentConfig)
 
-    from api.errors.handlers import errors
-    from api.home.routes import home
+    from api.errors.Handlers import errors
+    from api.home.Routes import home
 
     app.register_blueprint(errors)
     app.register_blueprint(home)
