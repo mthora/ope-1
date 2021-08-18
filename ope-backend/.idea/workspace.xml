@@ -1,16 +1,339 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="202d7476-74ff-4faa-a64d-5d7b688dd7b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/domain/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/dtos/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/dtos/users.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/repo/user/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/repo/user/user_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/repo/user/user_repository_interface.py" afterDir="false" />
+    <list default="true" id="e6453218-d32c-4ebe-b5bf-3f5baff68264" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.dbdata/auto.cnf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/ca-key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/ca.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/client-cert.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/client-key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/ib_buffer_pool" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/ib_logfile0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/ib_logfile1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/ibdata1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/ibtmp1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/columns_priv.MYD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/columns_priv.MYI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/columns_priv.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/db.MYD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/db.MYI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/db.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/db.opt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/engine_cost.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/engine_cost.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/event.MYD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/event.MYI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/event.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/func.MYD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/func.MYI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/func.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/general_log.CSM" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/general_log.CSV" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/general_log.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/gtid_executed.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/gtid_executed.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/help_category.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/help_category.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/help_keyword.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/help_keyword.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/help_relation.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/help_relation.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/help_topic.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/help_topic.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/innodb_index_stats.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/innodb_index_stats.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/innodb_table_stats.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/innodb_table_stats.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/ndb_binlog_index.MYD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/ndb_binlog_index.MYI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/ndb_binlog_index.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/plugin.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/proc.MYD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/proc.MYI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/proc.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/procs_priv.MYD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/procs_priv.MYI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/procs_priv.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/proxies_priv.MYD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/proxies_priv.MYI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/proxies_priv.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/server_cost.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/server_cost.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/servers.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/servers.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/slave_master_info.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/slave_master_info.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/slave_relay_log_info.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/slave_relay_log_info.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/slave_worker_info.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/slave_worker_info.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/slow_log.CSM" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/slow_log.CSV" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/slow_log.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/tables_priv.MYD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/tables_priv.MYI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/tables_priv.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/time_zone.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/time_zone.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/time_zone_leap_second.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/time_zone_leap_second.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/time_zone_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/time_zone_name.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/time_zone_transition.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/time_zone_transition.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/time_zone_transition_type.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/time_zone_transition_type.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/user.MYD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/user.MYI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/mysql/user.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/accounts.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/cond_instances.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/db.opt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_stages_current.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_stages_history.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_stages_history_long.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_stages_summary_by_account_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_stages_summary_by_host_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_stages_summary_by_thread_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_stages_summary_by_user_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_stages_summary_global_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_statements_current.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_statements_history.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_statements_history_long.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_statements_summary_by_account_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_statements_summary_by_digest.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_statements_summary_by_host_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_statements_summary_by_program.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_statements_summary_by_thread_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_statements_summary_by_user_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_statements_summary_global_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_transactions_current.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_transactions_history.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_transactions_history_long.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_transactions_summary_by_account_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_transactions_summary_by_host_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_transactions_summary_by_thread_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_transactions_summary_by_user_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_transactions_summary_global_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_waits_current.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_waits_history.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_waits_history_long.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_waits_summary_by_account_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_waits_summary_by_host_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_waits_summary_by_instance.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_waits_summary_by_thread_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_waits_summary_by_user_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/events_waits_summary_global_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/file_instances.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/file_summary_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/file_summary_by_instance.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/global_status.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/global_variables.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/host_cache.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/hosts.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/memory_summary_by_account_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/memory_summary_by_host_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/memory_summary_by_thread_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/memory_summary_by_user_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/memory_summary_global_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/metadata_locks.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/mutex_instances.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/objects_summary_global_by_type.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/performance_timers.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/prepared_statements_instances.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/replication_applier_configuration.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/replication_applier_status.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/replication_applier_status_by_coordinator.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/replication_applier_status_by_worker.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/replication_connection_configuration.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/replication_connection_status.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/replication_group_member_stats.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/replication_group_members.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/rwlock_instances.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/session_account_connect_attrs.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/session_connect_attrs.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/session_status.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/session_variables.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/setup_actors.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/setup_consumers.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/setup_instruments.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/setup_objects.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/setup_timers.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/socket_instances.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/socket_summary_by_event_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/socket_summary_by_instance.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/status_by_account.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/status_by_host.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/status_by_thread.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/status_by_user.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/table_handles.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/table_io_waits_summary_by_index_usage.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/table_io_waits_summary_by_table.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/table_lock_waits_summary_by_table.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/threads.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/user_variables_by_thread.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/users.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/performance_schema/variables_by_thread.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/private_key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/public_key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/server-cert.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/server-key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/storage/db.opt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/db.opt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/host_summary.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/host_summary_by_file_io.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/host_summary_by_file_io_type.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/host_summary_by_stages.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/host_summary_by_statement_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/host_summary_by_statement_type.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/innodb_buffer_stats_by_schema.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/innodb_buffer_stats_by_table.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/innodb_lock_waits.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/io_by_thread_by_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/io_global_by_file_by_bytes.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/io_global_by_file_by_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/io_global_by_wait_by_bytes.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/io_global_by_wait_by_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/latest_file_io.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/memory_by_host_by_current_bytes.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/memory_by_thread_by_current_bytes.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/memory_by_user_by_current_bytes.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/memory_global_by_current_bytes.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/memory_global_total.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/metrics.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/processlist.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/ps_check_lost_instrumentation.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/schema_auto_increment_columns.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/schema_index_statistics.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/schema_object_overview.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/schema_redundant_indexes.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/schema_table_lock_waits.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/schema_table_statistics.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/schema_table_statistics_with_buffer.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/schema_tables_with_full_table_scans.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/schema_unused_indexes.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/session.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/session_ssl_status.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/statement_analysis.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/statements_with_errors_or_warnings.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/statements_with_full_table_scans.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/statements_with_runtimes_in_95th_percentile.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/statements_with_sorting.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/statements_with_temp_tables.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/sys_config.TRG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/sys_config.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/sys_config.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/sys_config_insert_set_user.TRN" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/sys_config_update_set_user.TRN" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/user_summary.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/user_summary_by_file_io.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/user_summary_by_file_io_type.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/user_summary_by_stages.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/user_summary_by_statement_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/user_summary_by_statement_type.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/version.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/wait_classes_global_by_avg_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/wait_classes_global_by_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/waits_by_host_by_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/waits_by_user_by_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/waits_global_by_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024host_summary.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024host_summary_by_file_io.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024host_summary_by_file_io_type.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024host_summary_by_stages.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024host_summary_by_statement_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024host_summary_by_statement_type.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024innodb_buffer_stats_by_schema.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024innodb_buffer_stats_by_table.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024innodb_lock_waits.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024io_by_thread_by_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024io_global_by_file_by_bytes.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024io_global_by_file_by_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024io_global_by_wait_by_bytes.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024io_global_by_wait_by_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024latest_file_io.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024memory_by_host_by_current_bytes.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024memory_by_thread_by_current_bytes.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024memory_by_user_by_current_bytes.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024memory_global_by_current_bytes.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024memory_global_total.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024processlist.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024ps_digest_95th_percentile_by_avg_us.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024ps_digest_avg_latency_distribution.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024ps_schema_table_statistics_io.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024schema_flattened_keys.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024schema_index_statistics.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024schema_table_lock_waits.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024schema_table_statistics.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024schema_table_statistics_with_buffer.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024schema_tables_with_full_table_scans.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024session.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024statement_analysis.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024statements_with_errors_or_warnings.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024statements_with_full_table_scans.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024statements_with_runtimes_in_95th_percentile.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024statements_with_sorting.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024statements_with_temp_tables.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024user_summary.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024user_summary_by_file_io.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024user_summary_by_file_io_type.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024user_summary_by_stages.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024user_summary_by_statement_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024user_summary_by_statement_type.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024wait_classes_global_by_avg_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024wait_classes_global_by_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024waits_by_host_by_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024waits_by_user_by_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dbdata/sys/x@0024waits_global_by_latency.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/create_db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/controllers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/controllers/user_controllers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/controllers/user_controllers/create_user_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/user_use_cases/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/user_use_cases/create_user_use_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/validations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/validations/user_validations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/validations/user_validations/create_user_validation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/dto/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/dto/user_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infra/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infra/config/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infra/config/db_base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infra/config/db_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infra/db_entities/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infra/db_entities/users.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infra/repository/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infra/repository/user_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/adapters/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/adapters/router_adapter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/compose/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/compose/user/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/compose/user/create_user_composer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/config/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/config/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/routes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/routes/user_routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infrastructure/repo/UserRepository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/dtos/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/dtos/users.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/config/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/config/db_base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/config/db_config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/entities/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/entities/users.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/repo/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/repo/user/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/repo/user/user_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/repo/user/user_repository_interface.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage.db" beforeDir="false" afterPath="$PROJECT_DIR$/.dbdata/mysql/plugin.frm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +350,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1wgNLpmUICmgqs38CVBmMorrcRq" />
+  <component name="ProjectId" id="1witeSJfZKe2ojnpjGHukMzkawW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -42,18 +365,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\AS-Informatica\Desktop\prod\ope-projeto\ope-1\ope-backend\src\infrastructure\repo\user" />
-      <recent name="C:\Users\AS-Informatica\Desktop\prod\ope-projeto\ope-1\ope-backend\src\domain\dtos" />
+      <recent name="C:\Users\AS-Informatica\Desktop\prod\ope-projeto\ope-1\ope-backend\src\main" />
+      <recent name="C:\Users\AS-Informatica\Desktop\prod\ope-projeto\ope-1\ope-backend\src\infra" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="202d7476-74ff-4faa-a64d-5d7b688dd7b1" name="Changes" comment="" />
-      <created>1628876219022</created>
+      <changelist id="e6453218-d32c-4ebe-b5bf-3f5baff68264" name="Changes" comment="" />
+      <created>1628953331246</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1628876219022</updated>
+      <updated>1628953331246</updated>
     </task>
     <servers />
   </component>
@@ -67,6 +390,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

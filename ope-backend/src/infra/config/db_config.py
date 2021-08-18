@@ -3,9 +3,8 @@ from sqlalchemy.orm import sessionmaker
 
 
 class DBConnectionHandler:
-    # Conexão com SQLAlchemy
     def __init__(self):
-        self.__connection_string = "sqlite:///storage.db"
+        self.__connection_string = "mysql://root:root@localhost/storage"
         self.session = None
 
     def get_engine(self):
@@ -20,4 +19,3 @@ class DBConnectionHandler:
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.session.close()  # pylint: disable=no-member
-        

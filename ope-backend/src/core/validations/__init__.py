@@ -1,0 +1,1 @@
+from .user_validations.create_user_validation import validate_user
