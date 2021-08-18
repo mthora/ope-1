@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, SmallInteger, Float
+from sqlalchemy import Column, Integer, String, Float
 from src.infra.config import Base
 
 class Drinks(Base):
@@ -11,7 +11,7 @@ class Drinks(Base):
     img = Column(String(400), nullable=False)
 
     def to_dict(self):
-        return {"id": self.id, "name": self.name, "price": self.price, "amount": self.amount, "img": self.img }
+        return {"id": self.id, "name": self.name, "price": self.price, "amount": self.amount, "img": self.img}
 
     def __repr__(self):
         return f"Drinks [id={self.id}]"
