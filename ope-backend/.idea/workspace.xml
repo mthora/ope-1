@@ -2,21 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6453218-d32c-4ebe-b5bf-3f5baff68264" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Nova pasta/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Nova pasta/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Nova pasta/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Nova pasta/.idea/ope-backend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Nova pasta/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Nova pasta/src/__init__.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/controllers/user_controllers/list_users_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/user_use_cases/list_users_use_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/compose/user/list_users_composer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/controllers/user_controllers/create_user_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/controllers/user_controllers/create_user_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/controllers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/use_cases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/use_cases/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/use_cases/user_use_cases/create_user_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/use_cases/user_use_cases/create_user_use_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/validations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/validations/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/validations/user_validations/create_user_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/validations/user_validations/create_user_validation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/dto/user_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/dto/user_dto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/db_entities/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db_entities/users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/infra/repository/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/repository/user_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/adapters/router_adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/adapters/router_adapter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/compose/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/compose/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/routes/user_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/user_routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +43,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
