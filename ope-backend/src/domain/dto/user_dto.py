@@ -1,7 +1,7 @@
 from flask_restx import fields
 
 User = {
-    'user_id': fields.Integer(readonly=True),
+    'id': fields.Integer(readonly=True),
     'name': fields.String(required=True, max_length=50),
     'role': fields.Integer(required=True),
     'email': fields.String(required=True, max_length=100),

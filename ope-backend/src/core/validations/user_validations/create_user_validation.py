@@ -1,4 +1,4 @@
-def validate_user(name: str, role: str, email: str, password: str):
+def create_user_validation(name: str, role: str, email: str, password: str):
     message: list[str] = []
     if not isinstance(name, str) or name is None or name == "":
         message.append("Nome inválido")

@@ -1,6 +1,4 @@
-from src.core.validations import validate_user as validate
-from src.domain.dto import User
-
+from src.core.validations import create_user_validation as validate
 
 class CreateUser:
 

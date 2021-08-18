@@ -1,1 +1,2 @@
 from .user_controllers.create_user_controller import CreateUserController
+from .user_controllers.list_users_controller import ListUsersController
