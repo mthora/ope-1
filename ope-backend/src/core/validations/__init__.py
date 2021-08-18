@@ -1,2 +1,3 @@
 from .user_validations.create_user_validation import create_user_validation
 from .drink_validations.create_drink_validation import create_drink_validation
+from .dessert_validations.create_dessert_validation import create_dessert_validation
