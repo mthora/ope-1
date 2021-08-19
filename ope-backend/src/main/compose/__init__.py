@@ -8,3 +8,7 @@ from .drink.create_drink_composer import create_drink_composer
 
 #-----------------------------------
 from .dessert.create_dessert_composer import create_dessert_composer
+
+
+#---------------------------------
+from .role.create_role_composer import create_role_composer

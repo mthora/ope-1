@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask_restx import Api
 from flask_cors import CORS
-from src.main.routes import user_namespace, drink_namespace, dessert_namespace
+from src.main.routes import user_namespace, drink_namespace, dessert_namespace, role_namespace
 from werkzeug.middleware.proxy_fix import ProxyFix
 
 app = Flask(__name__)
@@ -23,3 +23,4 @@ api = Api(
 api.add_namespace(user_namespace, path='/users')
 api.add_namespace(drink_namespace, path='/drinks')
 api.add_namespace(dessert_namespace, path='/desserts')
+api.add_namespace(role_namespace, path='/roles')
