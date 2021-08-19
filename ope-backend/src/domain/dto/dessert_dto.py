@@ -6,4 +6,5 @@ Dessert = {
     'description': fields.String(required=True, max_length=200),
     'price': fields.Float(required=True),
     'amount': fields.Integer(required=True),
-    'img': fields.String(required=True, max_length=400)}
+    'img': fields.String(required=True, max_length=400)
+}
