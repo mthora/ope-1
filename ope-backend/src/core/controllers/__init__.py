@@ -8,6 +8,7 @@ from .drink_controllers.create_drink_controller import CreateDrinkController
 
 #---------------------------
 from .dessert_controllers.create_dessert_controller import CreateDessertController
+from .dessert_controllers.list_dessert_controller import ListDessertsController
 
 
 #---------------------------
