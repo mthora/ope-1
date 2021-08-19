@@ -2,23 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6453218-d32c-4ebe-b5bf-3f5baff68264" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/core/controllers/dessert_controllers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/controllers/dessert_controllers/create_dessert_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/use_cases/dessert_use_cases/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/use_cases/dessert_use_cases/create_dessert_use_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/validations/dessert_validations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/validations/dessert_validations/create_dessert_validation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/dto/dessert_dto.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infra/repository/dessert_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/compose/dessert/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/compose/dessert/create_dessert_composer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/routes/dessert_routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/controllers/role_controllers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/controllers/role_controllers/create_role_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/role_use_cases/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/role_use_cases/create_role_use_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/validations/role_validations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/validations/role_validations/create_role_validation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/dto/role_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infra/db_entities/roles.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infra/repository/role_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/compose/role/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/compose/role/create_role_composer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/routes/role_routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ope-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ope-backend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/controllers/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/use_cases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/use_cases/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/validations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/validations/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/dto/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/dto/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db_entities/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db_entities/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/infra/repository/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/repository/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/compose/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/compose/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/config/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/config/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/routes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +54,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
