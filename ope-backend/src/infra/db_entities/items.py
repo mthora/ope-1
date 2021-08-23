@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, SmallInteger, Float
+from sqlalchemy import Column, Integer, String, SmallInteger, Float, Boolean
 from src.infra.config import Base
 
 
@@ -9,7 +9,7 @@ class Items(Base):
     description = Column(String(200))
     price = Column(Float)
     amount = Column(Integer)
-    promotion = Column(Float)
+    promotion = Column(Boolean)
     img = Column(String(400))
 
     def to_dict(self):
