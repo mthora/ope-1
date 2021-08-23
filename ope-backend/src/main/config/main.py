@@ -14,6 +14,7 @@ def log_request():
     app.logger.debug("Request Headers %s", request.headers)
     return None
 
+
 api = Api(
     title="Talos RMS",
     version='1.0',
