@@ -4,9 +4,9 @@ def create_dessert_validation(name: str, description: str, price: float, amount:
         message.append("Nome inválido")
     if not isinstance(description,str) or description is None or len(description) > 200 or description == "":
         message.append("Descrição inválida")
-    if not isinstance(price, float) or price is None:
+    if not isinstance(price, float) or price is None or price <= 0:
         message.append("Preço inválido")
-    if not isinstance(amount, int) or amount is None:
+    if not isinstance(amount, int) or amount is None or amount < 0:
         message.append("Quantidade inválida")
     if not isinstance(img, str) or img is None:
         message.append("Imagem obrigatória")
