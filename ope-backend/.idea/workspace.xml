@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6453218-d32c-4ebe-b5bf-3f5baff68264" name="Changes" comment="" />
+    <list default="true" id="e6453218-d32c-4ebe-b5bf-3f5baff68264" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/core/controllers/dessert_controllers/list_dessert_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/dessert_use_cases/list_desserts_use_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/compose/dessert/list_dessert_composer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/controllers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/use_cases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/use_cases/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/dto/dessert_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/dto/dessert_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/repository/dessert_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/repository/dessert_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/compose/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/compose/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/routes/dessert_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/dessert_routes.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
