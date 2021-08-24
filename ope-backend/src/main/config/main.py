@@ -15,6 +15,7 @@ def log_request():
     app.logger.debug("Request Headers %s", request.headers)
     return None
 
+
 api = Api(
     title="Talos RMS",
     version='1.0',
@@ -24,5 +25,5 @@ api = Api(
 api.add_namespace(user_namespace, path='/users')
 api.add_namespace(drink_namespace, path='/drinks')
 api.add_namespace(dessert_namespace, path='/desserts')
-api.add_namespace(item_namespace, path='/itens')
+api.add_namespace(item_namespace, path='/items')
 api.add_namespace(role_namespace, path='/roles')

@@ -1,4 +1,4 @@
-from sqlalchemy.exc import IntegrityError
+from sqlalchemy.exc import IntegrityError, NoResultFound, MultipleResultsFound
 from src.infra.config import DBConnectionHandler
 from src.infra.db_entities import Users as User
 
@@ -42,3 +42,16 @@ class UserRepository:
                 return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
             finally:
                 db.session.close()
+
+    @classmethod
+    def get_user_by_id(cls, user_id:int):
+        with DBConnectionHandler() as db:
+            try:
+                user = db.session.query(User).filter_by(id=user_id).one()
+                return {"data": user.to_dict(), "status": 200, "errors": []}
+            except NoResultFound:
+                return {"data": None, "status": 404, "errors": [f"Usuário de id {user_id} não existe"]}
+            except MultipleResultsFound:
+                return {"data": None, "status": 409, "errors": [f"Conflito de usuário com id {user_id}"]}
+            except Exception as ex:
+                return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
