@@ -5,43 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6453218-d32c-4ebe-b5bf-3f5baff68264" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/core/controllers/user_controllers/get_user_by_id_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/use_cases/user_use_cases/get_user_by_id_use_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/validations/user_validations/get_user_by_id_validation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/compose/user/get_user_by_id_composer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ope-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ope-backend.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/controllers/dessert_controllers/get_dessert_by_id_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/use_cases/dessert_use_cases/get_dessert_by_id_use_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/validations/dessert_validations/get_dessert_by_id_validation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/compose/dessert/get_dessert_by_id_composer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/controllers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/controllers/dessert_controllers/create_dessert_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/controllers/dessert_controllers/create_dessert_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/use_cases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/use_cases/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/use_cases/dessert_use_cases/create_dessert_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/use_cases/dessert_use_cases/create_dessert_use_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/validations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/validations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/dto/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/dto/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/db_entities/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db_entities/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/repository/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/repository/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/compose/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/compose/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/compose/dessert/create_dessert_composer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/compose/dessert/create_dessert_composer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/compose/dessert/list_dessert_composer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/compose/dessert/list_dessert_composer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/config/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/config/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/routes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/routes/dessert_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/dessert_routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/use_cases/user_use_cases/create_user_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/use_cases/user_use_cases/create_user_use_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/validations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/validations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/validations/dessert_validations/create_dessert_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/validations/dessert_validations/create_dessert_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/validations/drink_validations/create_drink_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/validations/drink_validations/create_drink_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/validations/role_validations/create_role_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/validations/role_validations/create_role_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/repository/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/repository/user_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/adapters/router_adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/adapters/router_adapter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/config/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/config/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/routes/user_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/user_routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/validations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/validations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/repository/dessert_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/repository/dessert_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/routes/dessert_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/dessert_routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/repository/item_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/repository/item_repository.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

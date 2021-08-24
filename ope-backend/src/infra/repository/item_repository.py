@@ -48,12 +48,12 @@ class ItemRepository:
     def list_items(cls):
         with DBConnectionHandler() as db:
             try:
-                item = []
+                items = []
                 raw_item: list[Item] = db.session.query(Item).all()
                 for item in raw_item:
-                    item.append(item.to_dict())
+                    items.append(item.to_dict())
                 return {
-                    "data": item,
+                    "data": items,
                     "status": 200,
                     "errors": []}
             except IntegrityError:
