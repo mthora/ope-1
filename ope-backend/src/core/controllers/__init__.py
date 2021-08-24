@@ -5,6 +5,8 @@ from .user_controllers.get_user_by_id_controller import GetUserController
 # --------------------------
 
 from .drink_controllers.create_drink_controller import CreateDrinkController
+from .drink_controllers.list_drinks_controller import ListDrinksController
+from .drink_controllers.get_drink_by_id_controller import GetDrinkController
 
 # ---------------------------
 from .dessert_controllers.create_dessert_controller import CreateDessertController
