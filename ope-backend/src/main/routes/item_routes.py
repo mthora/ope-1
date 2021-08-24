@@ -6,7 +6,7 @@ from src.main.adapters import flask_adapter
 from src.main.compose import create_item_composer
 from src.main.compose import list_item_composer
 
-item_namespace = Namespace('itens')
+item_namespace = Namespace('items')
 item = item_namespace.model('Item', ItemDto)
 
 

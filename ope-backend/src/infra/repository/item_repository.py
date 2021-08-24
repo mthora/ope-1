@@ -45,7 +45,7 @@ class ItemRepository:
                 db.session.close()
 
     @classmethod
-    def list_item(cls):
+    def list_items(cls):
         with DBConnectionHandler() as db:
             try:
                 item = []
