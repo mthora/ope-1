@@ -4,6 +4,7 @@ from src.infra.config import Base
 
 
 class Items(Base):
+
     __tablename__ = "items"
     id = Column(Integer, primary_key=True)
     name = Column (String(200))
@@ -22,8 +23,8 @@ class Items(Base):
             "amount": self.amount,
             "promotion": self.promotion,
             "img": self.img
-
         }
 
+
     def __repr__(self):
-        return f"Items [id{self.id}]"
+        return f"Item [id={self.id}]"

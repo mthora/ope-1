@@ -9,5 +9,3 @@ Item = {
     'promotion': fields.Boolean(Required=True),
     'img': fields.String(required=True, max_length=400)
 }
-
-

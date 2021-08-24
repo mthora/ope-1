@@ -1,4 +1,4 @@
-from sqlalchemy.exc import IntegrityError
+from sqlalchemy.exc import IntegrityError, NoResultFound, MultipleResultsFound
 from src.infra.config import DBConnectionHandler
 from src.infra.db_entities import Desserts as Dessert
 
@@ -40,3 +40,32 @@ class DessertRepository:
                 return {"data": [], "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
             finally:
                 db.session.close()
+
+    @classmethod
+    def get_dessert_by_id(cls, dessert_id:int):
+        with DBConnectionHandler() as db:
+            try:
+                dessert = db.session.query(Dessert).filter_by(id=dessert_id).one()
+                return {
+                        "data": dessert.to_dict(),
+                        "status": 200,
+                        "errors": [f"Sobremesa de nome {dessert_id} não existe"]
+                }
+            except NoResultFound:
+                return {
+                    "data": None,
+                    "status": 404,
+                    "errors": [f"Sobremesa de nome {dessert_id} não existe"]
+                }
+            except MultipleResultsFound:
+                return {
+                    "data": None,
+                    "status": 409,
+                    "errors": [f"Conflito de usuário com id {dessert_id}"]
+                }
+            except Exception as ex:
+                return {
+                    "data": None,
+                    "status": 500,
+                    "errors": ["Algo deu errado na conexão com o banco de dados"]
+                }
