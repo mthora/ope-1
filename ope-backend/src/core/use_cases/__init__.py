@@ -15,3 +15,8 @@ from .dessert_use_cases.list_desserts_use_case import ListDesserts
 
 #-----------------------------
 from .role_use_cases.create_role_use_case import CreateRole
+
+
+
+from .item_use_cases.create_item_use_case import CreateItem
+from .item_use_cases.list_item_use_case import ListItems
