@@ -12,3 +12,10 @@ from .dessert_controllers.list_dessert_controller import ListDessertsController
 from .dessert_controllers.get_dessert_by_id_controller import GetDessertController
 # ---------------------------
 from .role_controllers.create_role_controller import CreateRoleController
+
+
+
+
+
+from .item_controllers.create_item_controller import CreateItemController
+from .item_controllers.list_item_controller import ListItemsController

@@ -41,3 +41,4 @@ class DessertActions(Resource):
     def get(self, id):
         response = flask_adapter(request=request, composer=get_dessert_composer(), arg=id)
         return make_response(jsonify(response), int(response["status"]))
+      

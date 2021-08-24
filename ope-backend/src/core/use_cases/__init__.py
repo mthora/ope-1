@@ -12,3 +12,9 @@ from .dessert_use_cases.get_dessert_by_id_use_case import GetDessertById
 
 # -----------------------------
 from .role_use_cases.create_role_use_case import CreateRole
+
+from .item_use_cases.create_item_use_case import CreateItem
+from .item_use_cases.list_item_use_case import ListItems
+
+# -----------------------------
+from .role_use_cases.create_role_use_case import CreateRole
