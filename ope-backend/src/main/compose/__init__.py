@@ -4,6 +4,7 @@ from .user.list_users_composer import list_users_composer
 
 #-----------------------------------
 from .drink.create_drink_composer import create_drink_composer
+from .drink.list_drinks_composer import list_drinks_composer
 
 
 #-----------------------------------

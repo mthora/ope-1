@@ -4,6 +4,8 @@ from .user_use_cases.get_user_by_id_use_case import GetUserById
 
 # ---------------------------
 from .drink_use_cases.create_drink_use_case import CreateDrink
+from .drink_use_cases.list_drinks_use_case import ListDrinks
+from .drink_use_cases.get_drink_by_id_use_case import GetDrinkById
 
 # ---------------------------
 from .dessert_use_cases.create_dessert_use_case import CreateDessert
