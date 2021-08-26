@@ -20,3 +20,8 @@ from .item_use_cases.list_item_use_case import ListItems
 
 # -----------------------------
 from .role_use_cases.create_role_use_case import CreateRole
+
+
+from .product_order_cases.create_product_order_use_case import CreateProduct_Order
+from .product_order_cases.list_products_orders_use_case import ListProducts_Orders
+from .product_order_cases.get_product_order_by_id_use_case import GetProduct_OrderById
