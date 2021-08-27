@@ -12,7 +12,7 @@ class Users(Base):
     password = Column(String(100), nullable=False)
 
     def to_dict(self):
-        return {"id": self.id, "name": self.name, "role": self.role, "email": self.email, "password": self.password}
+        return {"id": self.id, "name": self.name, "role": self.role, "email": self.email}
 
     def __repr__(self):
         return f"User [email={self.email}]"

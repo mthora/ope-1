@@ -5,5 +5,5 @@ User = {
     'name': fields.String(required=True, max_length=50),
     'role': fields.Integer(required=True),
     'email': fields.String(required=True, max_length=100),
-    'password': fields.String(required=True, max_length=100),
+    'password': fields.String(required=True, max_length=100)
 }
