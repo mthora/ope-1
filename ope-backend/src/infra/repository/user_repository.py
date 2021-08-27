@@ -1,4 +1,5 @@
 from sqlalchemy.exc import IntegrityError, NoResultFound, MultipleResultsFound
+from src.main.utils import hash_password
 from src.infra.config import DBConnectionHandler
 from src.infra.db_entities import Users as User
 
@@ -28,7 +29,7 @@ class UserRepository:
     def create_user(cls, name: str, role: str, email: str, password: str):
         with DBConnectionHandler() as db:
             try:
-                new_user = User(name=name, role=role, email=email, password=password)
+                new_user = User(name=name, role=role, email=email, password=hash_password(password))
                 print("repo", new_user)
                 db.session.add(new_user)
                 db.session.commit()
