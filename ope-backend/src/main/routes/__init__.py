@@ -3,3 +3,4 @@ from .drink_routes import drink_namespace
 from .dessert_routes import dessert_namespace
 from .role_routes import role_namespace
 from .item_routes import item_namespace
+from .product_order_routes import product_order_namespace
