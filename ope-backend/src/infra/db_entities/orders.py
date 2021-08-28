@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, SmallInteger, Float, Boolean
+from sqlalchemy import Column, Integer, String, Boolean
 from src.infra.config import Base
 
 
@@ -14,18 +14,16 @@ class Orders(Base):
     obs = Column(String(200))
     confirmed = Column(Boolean)
 
+    def to_dict(self):
+        return {"id": self.id,
+                "done": self.done,
+                "initial_date": self.initial_date,
+                "end_date": self.end_date,
+                "consumed_in": self.consumed_in,
+                "table": self.table,
+                "payment_method": self.payment_method,
+                "obs": self.obs,
+                "confirmed": self.confirmed}
 
-def to_dict(self):
-    return {"id": self.id,
-            "done": self.done,
-            "initial_date": self.initial_date,
-            "end_date": self.end_date,
-            "consumed_in": self.consumed_in,
-            "table": self.table,
-            "payment_method": self.payment_method,
-            "obs": self.obs,
-            "confirmed": self.confirmed}
-
-
-def __repr__(self):
-    return f'Order [id{self.id}]'
+    def __repr__(self):
+        return f'Order [id{self.id}]'
