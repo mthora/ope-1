@@ -5,8 +5,91 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6453218-d32c-4ebe-b5bf-3f5baff68264" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/core/controllers/product_order_controllers/create_product_order_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/controllers/product_order_controllers/get_product_order_by_id_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/controllers/product_order_controllers/list_products_orders.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/product_order_cases/create_product_order_use_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/product_order_cases/get_product_order_by_id_use_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/product_order_cases/list_products_orders_use_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/validations/product_order_validations/create_product_order_validation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infra/db_entities/products_orders.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infra/repository/product_order_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/compose/product_order/create_product_order_composer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/compose/product_order/get_product_order_by_id_composer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/compose/product_order/list_products_orders_composer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/routes/product_order_routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/utils/pass_hash.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ope-backend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/db_entities/orders.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db_entities/orders.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/controllers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/controllers/dessert_controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/controllers/product_order_controllers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/controllers/dessert_controllers/create_dessert_controller.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/controllers/dessert_controllers/get_dessert_by_id_controller.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/controllers/dessert_controllers/list_dessert_controller.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/controllers/drink_controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/use_cases/product_order_cases/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/controllers/drink_controllers/create_drink_controller.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/controllers/drink_controllers/get_drink_by_id_controller.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/controllers/drink_controllers/list_drinks_controller.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/controllers/role_controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/validations/product_order_validations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/controllers/role_controllers/create_role_controller.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/use_cases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/use_cases/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/use_cases/dessert_use_cases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/compose/product_order/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/use_cases/dessert_use_cases/create_dessert_use_case.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/use_cases/dessert_use_cases/get_dessert_by_id_use_case.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/use_cases/dessert_use_cases/list_desserts_use_case.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/use_cases/drink_use_cases/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/use_cases/drink_use_cases/create_drink_use_case.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/use_cases/drink_use_cases/get_drink_by_id_use_case.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/use_cases/drink_use_cases/list_drinks_use_case.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/use_cases/role_use_cases/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/use_cases/role_use_cases/create_role_use_case.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/validations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/validations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/validations/dessert_validations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/validations/dessert_validations/create_dessert_validation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/validations/dessert_validations/get_dessert_by_id_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/validations/product_order_validations/get_product_order_by_id_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/validations/drink_validations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/validations/drink_validations/create_drink_validation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/validations/drink_validations/get_drink_by_id_validation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/validations/role_validations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/validations/role_validations/create_role_validation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/dto/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/dto/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/dto/dessert_dto.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/dto/drink_dto.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/dto/role_dto.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/dto/user_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/dto/user_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db_entities/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db_entities/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db_entities/desserts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db_entities/drinks.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db_entities/roles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db_entities/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db_entities/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/repository/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/repository/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/repository/dessert_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/repository/drink_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/repository/role_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/repository/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/repository/user_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/compose/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/compose/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/compose/dessert/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/compose/dessert/create_dessert_composer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/compose/dessert/get_dessert_by_id_composer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/compose/dessert/list_dessert_composer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/compose/drink/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/compose/drink/create_drink_composer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/compose/drink/get_drink_by_id_composer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/compose/drink/list_drinks_composer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/compose/role/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/compose/role/create_role_composer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/config/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/config/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/routes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/routes/dessert_routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/routes/drink_routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/routes/role_routes.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

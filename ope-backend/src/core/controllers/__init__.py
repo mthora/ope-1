@@ -1,23 +1,13 @@
+# UserControllers
 from .user_controllers.create_user_controller import CreateUserController
 from .user_controllers.list_users_controller import ListUsersController
 from .user_controllers.get_user_by_id_controller import GetUserController
 
-# --------------------------
-
-from .drink_controllers.create_drink_controller import CreateDrinkController
-from .drink_controllers.list_drinks_controller import ListDrinksController
-from .drink_controllers.get_drink_by_id_controller import GetDrinkController
-
-# ---------------------------
-from .dessert_controllers.create_dessert_controller import CreateDessertController
-from .dessert_controllers.list_dessert_controller import ListDessertsController
-from .dessert_controllers.get_dessert_by_id_controller import GetDessertController
-# ---------------------------
-from .role_controllers.create_role_controller import CreateRoleController
-
-
-
-
-
+# ItemControllers
 from .item_controllers.create_item_controller import CreateItemController
 from .item_controllers.list_item_controller import ListItemsController
+
+# ProductOrderControllers
+from .product_order_controllers.create_product_order_controller import CreateProduct_OrderController
+from .product_order_controllers.list_products_orders import ListProducts_OrdersController
+from .product_order_controllers.get_product_order_by_id_controller import GetProduct_OrderController
