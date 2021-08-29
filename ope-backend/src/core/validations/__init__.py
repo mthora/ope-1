@@ -8,3 +8,7 @@ from .item_validations.create_item_validation import create_item_validation
 # ProductOrderValidations
 from .product_order_validations.create_product_order_validation import create_product_order_validation
 from .product_order_validations.get_product_order_by_id_validation import get_product_order_validation
+
+# OrderValidations
+from .order_validations.create_order_validation import create_order_validation
+from .order_validations.get_order_by_id_validation import get_order_validation
