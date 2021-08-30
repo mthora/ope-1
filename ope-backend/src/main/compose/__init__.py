@@ -9,3 +9,8 @@ from .item.list_item_composer import list_item_composer
 # ProductOrderComposers
 from .product_order.create_product_order_composer import create_product_order_composer
 from .product_order.list_products_orders_composer import list_products_orders_composer
+
+# OrderComposers
+from .order.create_order_composer import create_order_composer
+from .order.list_orders_composer import list_orders_composer
+
