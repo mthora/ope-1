@@ -7,7 +7,7 @@ class GetUserById:
         self.user_repository = user_repository
 
     def get_by_id(self, user_id):
-        invalid_inputs = validate(id=user_id)
+        invalid_inputs = validate(user_id=user_id)
         input_is_valid = len(invalid_inputs) == 0
         if input_is_valid:
             response = self.user_repository.get_user_by_id(user_id=user_id)
