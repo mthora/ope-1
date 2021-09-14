@@ -2,6 +2,8 @@
 from .user_use_cases.create_user_use_case import CreateUser
 from .user_use_cases.list_users_use_case import ListUsers
 from .user_use_cases.get_user_by_id_use_case import GetUserById
+from .user_use_cases.update_user_use_case import UpdateUser
+from .user_use_cases.delete_user_use_case import DeleteUser
 
 # ItemUseCases
 from .item_use_cases.create_item_use_case import CreateItem

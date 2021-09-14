@@ -2,6 +2,8 @@
 from .user_controllers.create_user_controller import CreateUserController
 from .user_controllers.list_users_controller import ListUsersController
 from .user_controllers.get_user_by_id_controller import GetUserController
+from .user_controllers.update_user_controller import UpdateUserController
+from .user_controllers.delete_user_controller import DeleteUserController
 
 # ItemControllers
 from .item_controllers.create_item_controller import CreateItemController

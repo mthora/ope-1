@@ -45,6 +45,45 @@ class UserRepository:
                 db.session.close()
 
     @classmethod
+    def update_user(cls, user_id: int, name: str, role: str, email: str):
+        with DBConnectionHandler() as db:
+            try:
+                user = db.session.query(User).filter_by(id=user_id).first()
+                if user:
+                    print(user)
+                    user.name = name
+                    user.role = role
+                    user.email = email
+                    db.session.commit()
+                    return {"data": None, "status": 200, "errors": []}
+                return {"data": None, "status": 404, "errors": [f"Usuário não encontrado."]}
+            except IntegrityError:
+                return {"data": None, "status": 409, "errors": [f"E-mail e/ou nome de usuário já existe."]}
+            except Exception as ex:
+                print(ex)
+                db.session.rollback()
+                return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
+            finally:
+                db.session.close()
+
+    @classmethod
+    def delete_user(cls, user_id: int):
+        with DBConnectionHandler() as db:
+            try:
+                user = db.session.query(User).filter_by(id=user_id).first()
+                if user:
+                    db.session.delete(user)
+                    db.session.commit()
+                    return {"data": None, "status": 200, "errors": []}
+                return {"data": None, "status": 404, "errors": [f"Usuário de id {user_id} não existe"]}
+            except MultipleResultsFound:
+                return {"data": None, "status": 409, "errors": [f"Conflito de usuários com id {user_id}"]}
+            except Exception as ex:
+                return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
+            finally:
+                db.session.close()
+
+    @classmethod
     def get_user_by_id(cls, user_id:int):
         with DBConnectionHandler() as db:
             try:
@@ -53,6 +92,8 @@ class UserRepository:
             except NoResultFound:
                 return {"data": None, "status": 404, "errors": [f"Usuário de id {user_id} não existe"]}
             except MultipleResultsFound:
-                return {"data": None, "status": 409, "errors": [f"Conflito de usuário com id {user_id}"]}
+                return {"data": None, "status": 409, "errors": [f"Conflito de usuários com id {user_id}"]}
             except Exception as ex:
                 return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
+            finally:
+                db.session.close()
