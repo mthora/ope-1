@@ -32,8 +32,8 @@ class Product_OrderRepository:
                 product_order = db.session.query(Product_Order).filter_by(id=product_order_id).one()
                 return {"data": product_order.to_dict(), "status": 200, "errors": []}
             except NoResultFound:
-                return {"data": None, "status": 404, "errors": [f"Usuário de id {product_order_id} não existe"]}
+                return {"data": None, "status": 404, "errors": [f"Pedido de produto de id {product_order_id} não existe"]}
             except MultipleResultsFound:
-                return {"data": None, "status": 409, "errors": [f"Conflito de usuário com id {product_order_id}"]}
+                return {"data": None, "status": 409, "errors": [f"Conflito de pedido de produto com id {product_order_id}"]}
             except Exception as ex:
                 return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}

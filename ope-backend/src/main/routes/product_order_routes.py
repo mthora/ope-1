@@ -1,11 +1,13 @@
 from flask_restx import Resource, Namespace
 from flask import request, jsonify, make_response
+from src.domain.dto import Product_Order as Product_OrderDto
 from src.main.adapters import flask_adapter
 
-from src.main.compose.product_order.get_product_order_by_id_composer import get_product_order_composer
 from src.main.compose import list_products_orders_composer
+from src.main.compose.product_order.get_product_order_by_id_composer import get_product_order_composer
 
 product_order_namespace = Namespace('products_orders')
+product_order = product_order_namespace.model('Products_Orders', Product_OrderDto)
 
 
 @product_order_namespace.route('/')
