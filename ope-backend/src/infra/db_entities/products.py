@@ -3,11 +3,11 @@ from sqlalchemy import Column, Integer, String, Float, Boolean
 from src.infra.config import Base
 
 
-class Items(Base):
+class Products(Base):
 
-    __tablename__ = "items"
+    __tablename__ = "products"
     id = Column(Integer, primary_key=True)
-    name = Column (String(200))
+    name = Column(String(200))
     description = Column(String(200))
     price = Column(Float)
     amount = Column(Integer)

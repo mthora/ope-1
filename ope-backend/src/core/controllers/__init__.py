@@ -5,9 +5,9 @@ from .user_controllers.get_user_by_id_controller import GetUserController
 from .user_controllers.update_user_controller import UpdateUserController
 from .user_controllers.delete_user_controller import DeleteUserController
 
-# ItemControllers
-from .item_controllers.create_item_controller import CreateItemController
-from .item_controllers.list_item_controller import ListItemsController
+# ProductsControllers
+from .product_controllers.create_item_controller import CreateProductController
+from .product_controllers.list_products_controller import ListProductsController
 
 # ProductOrderControllers
 from .product_order_controllers.create_product_order_controller import CreateProduct_OrderController

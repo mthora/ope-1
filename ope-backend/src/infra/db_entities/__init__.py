@@ -1,5 +1,5 @@
 from .users import Users
-from .items import Items
+from .products import Products
 from .orders import Orders
 from .products_orders import Products_Orders
 

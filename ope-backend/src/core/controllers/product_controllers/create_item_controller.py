@@ -1,7 +1,7 @@
-class CreateItemController:
+class CreateProductController:
 
-    def __init__(self, create_item_use_case):
-        self.create_item_use_case = create_item_use_case
+    def __init__(self, create_product_use_case):
+        self.create_product_use_case = create_product_use_case
 
     def route(self, body):
 
@@ -13,7 +13,7 @@ class CreateItemController:
             amount = body["amount"] if "amount" in body else None
             promotion = body["promotion"] if "promotion" in body else None
             img = body["img"] if "img" in body else None
-            response = self.create_item_use_case.create(
+            response = self.create_product_use_case.create(
                 name=name,
                 description=description,
                 price=price,

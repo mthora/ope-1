@@ -1,4 +1,4 @@
-def create_item_validation(
+def create_product_validation(
         name: str,
         description: str,
         price: float,
