@@ -1,12 +1,12 @@
 from sqlalchemy.exc import IntegrityError
 from src.infra.config import DBConnectionHandler
-from src.infra.db_entities import Items as Item
+from src.infra.db_entities import Products as Product
 
 
-class ItemRepository:
+class ProductRepository:
 
     @classmethod
-    def create_item(
+    def create_product(
             cls,
             name: str,
             description: str,
@@ -16,16 +16,16 @@ class ItemRepository:
             img: str):
         with DBConnectionHandler() as db:
             try:
-                new_item = Item(name=name,
+                new_product = Product(name=name,
                                 description=description,
                                 price=price,
                                 amount=amount,
                                 promotion=promotion,
                                 img=img)
-                db.session.add(new_item)
+                db.session.add(new_product)
                 db.session.commit()
                 return {
-                    "data": new_item.to_dict(),
+                    "data": new_product.to_dict(),
                     "status": 201,
                     "errors": []}
             except IntegrityError:
@@ -45,15 +45,15 @@ class ItemRepository:
                 db.session.close()
 
     @classmethod
-    def list_items(cls):
+    def list_products(cls):
         with DBConnectionHandler() as db:
             try:
-                items = []
-                raw_item: list[Item] = db.session.query(Item).all()
-                for item in raw_item:
-                    items.append(item.to_dict())
+                products = []
+                raw_products: list[Product] = db.session.query(Product).all()
+                for product in raw_products:
+                    products.append(product.to_dict())
                 return {
-                    "data": items,
+                    "data": products,
                     "status": 200,
                     "errors": []}
             except IntegrityError:

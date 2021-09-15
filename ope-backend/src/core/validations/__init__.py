@@ -5,7 +5,7 @@ from .user_validations.update_user_validation import update_user_validation
 from .user_validations.delete_user_validation import delete_user_validation
 
 # ItemValidations
-from .item_validations.create_item_validation import create_item_validation
+from .product_validations.create_product_validation import create_product_validation
 
 # ProductOrderValidations
 from .product_order_validations.create_product_order_validation import create_product_order_validation

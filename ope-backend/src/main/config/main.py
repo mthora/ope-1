@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask_restx import Api
 from flask_cors import CORS
-from src.main.routes import user_namespace, item_namespace, product_order_namespace, order_namespace
+from src.main.routes import user_namespace, product_namespace, product_order_namespace, order_namespace
 from werkzeug.middleware.proxy_fix import ProxyFix
 
 
@@ -24,6 +24,6 @@ api = Api(
 )
 
 api.add_namespace(user_namespace, path='/users')
-api.add_namespace(item_namespace, path='/items')
+api.add_namespace(product_namespace, path='/products')
 api.add_namespace(product_order_namespace, path='/products_orders')
 api.add_namespace(order_namespace, path='/orders')

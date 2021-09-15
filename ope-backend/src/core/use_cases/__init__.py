@@ -5,9 +5,9 @@ from .user_use_cases.get_user_by_id_use_case import GetUserById
 from .user_use_cases.update_user_use_case import UpdateUser
 from .user_use_cases.delete_user_use_case import DeleteUser
 
-# ItemUseCases
-from .item_use_cases.create_item_use_case import CreateItem
-from .item_use_cases.list_item_use_case import ListItems
+# ProductUseCases
+from .product_use_cases.create_product_use_case import CreateProduct
+from .product_use_cases.list_products_use_case import ListProducts
 
 # ProductOrderUseCases
 from .product_order_cases.create_product_order_use_case import CreateProduct_Order
