@@ -1,4 +1,4 @@
-from sqlalchemy.exc import IntegrityError
+from sqlalchemy.exc import IntegrityError, NoResultFound, MultipleResultsFound
 from src.infra.config import DBConnectionHandler
 from src.infra.db_entities import Products as Product
 
@@ -16,12 +16,7 @@ class ProductRepository:
             img: str):
         with DBConnectionHandler() as db:
             try:
-                new_product = Product(name=name,
-                                description=description,
-                                price=price,
-                                amount=amount,
-                                promotion=promotion,
-                                img=img)
+                new_product = Product(name=name,description=description,price=price,amount=amount,promotion=promotion,img=img)
                 db.session.add(new_product)
                 db.session.commit()
                 return {
@@ -69,5 +64,21 @@ class ProductRepository:
                     "data": [],
                     "status": 500,
                     "errors": ["Algo deu errado na conexão com o banco de dados"]}
+            finally:
+                db.session.close()
+
+    def delete_product(self,product_id:int):
+        with DBConnectionHandler() as db:
+            try:
+                product = db.session.query(Product).filter_by(id=product_id).first()
+                if product:
+                    db.session.delete(product)
+                    db.session.commit()
+                    return {"data": None, "status": 200, "errors": []}
+                return {"data": None, "status": 404, "errors": [f"Product de id {product_id} não existe"]}
+            except MultipleResultsFound:
+                return {"data": None, "status": 409, "errors": [f"Conflito de usuários com id {product_id}"]}
+            except Exception as ex:
+                return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
             finally:
                 db.session.close()
