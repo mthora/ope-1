@@ -7,6 +7,7 @@ from .user.delete_user_composer import delete_user_composer
 # ProductComposers
 from .product.create_product_composer import create_product_composer
 from .product.list_products_composer import list_products_composer
+from .product.delete_product_composer import delete_product_composer
 
 # ProductOrderComposers
 from .product_order.create_product_order_composer import create_product_order_composer
