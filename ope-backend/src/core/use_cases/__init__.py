@@ -9,6 +9,7 @@ from .user_use_cases.delete_user_use_case import DeleteUser
 from .product_use_cases.create_product_use_case import CreateProduct
 from .product_use_cases.list_products_use_case import ListProducts
 from .product_use_cases.delete_product_use_case import DeleteProduct
+from .product_use_cases.update_product_use_case import UpdateProduct
 
 
 # ProductOrderUseCases

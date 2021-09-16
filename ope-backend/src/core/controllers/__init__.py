@@ -9,6 +9,7 @@ from .user_controllers.delete_user_controller import DeleteUserController
 from .product_controllers.create_item_controller import CreateProductController
 from .product_controllers.list_products_controller import ListProductsController
 from .product_controllers.delete_product_controller import DeleteProductController
+from .product_controllers.update_product_controller import UpdateProductController
 
 # ProductOrderControllers
 from .product_order_controllers.create_product_order_controller import CreateProduct_OrderController

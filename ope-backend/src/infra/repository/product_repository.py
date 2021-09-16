@@ -6,17 +6,11 @@ from src.infra.db_entities import Products as Product
 class ProductRepository:
 
     @classmethod
-    def create_product(
-            cls,
-            name: str,
-            description: str,
-            price: float,
-            amount: int,
-            promotion: bool,
-            img: str):
+    def create_product(cls, name: str, description: str, price: float, amount: int, promotion: bool, img: str):
         with DBConnectionHandler() as db:
             try:
-                new_product = Product(name=name,description=description,price=price,amount=amount,promotion=promotion,img=img)
+                new_product = Product(name=name, description=description, price=price, amount=amount,
+                                      promotion=promotion, img=img)
                 db.session.add(new_product)
                 db.session.commit()
                 return {
@@ -67,7 +61,7 @@ class ProductRepository:
             finally:
                 db.session.close()
 
-    def delete_product(self,product_id:int):
+    def delete_product(self, product_id: int):
         with DBConnectionHandler() as db:
             try:
                 product = db.session.query(Product).filter_by(id=product_id).first()
@@ -79,6 +73,36 @@ class ProductRepository:
             except MultipleResultsFound:
                 return {"data": None, "status": 409, "errors": [f"Conflito de usuários com id {product_id}"]}
             except Exception as ex:
+                return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
+            finally:
+                db.session.close()
+
+    def update_product(self,
+                        product_id: int,
+                        name: str,
+                        description: str,
+                        price: float,
+                        amount: int,
+                        promotion: bool,
+                        img: str):
+        with DBConnectionHandler() as db:
+            try:
+                product = db.session.query(Product).filter_by(id=product_id).first()
+                if product:
+                    product.name = name
+                    product.description = description
+                    product.price = price
+                    product.amount = amount
+                    product.promotion = promotion
+                    product.img = img
+                    db.session.commit()
+                    return {"data": None, "status": 200, "errors": []}
+                return {"data": None, "status": 404, "errors": [f"Product de id {product_id} não existe"]}
+            except IntegrityError:
+                return {"data": None, "status": 409, "errors": [f"Nome de produto já existe."]}
+            except Exception as ex:
+                print(ex)
+                db.session.rollback()
                 return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
             finally:
                 db.session.close()
