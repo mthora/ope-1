@@ -12,6 +12,11 @@ from .product_validations.update_product_validation import update_product_valida
 # ProductOrderValidations
 from .product_order_validations.create_product_order_validation import create_product_order_validation
 from .product_order_validations.get_product_order_by_id_validation import get_product_order_validation
+from .product_order_validations.update_product_order_validation import update_product_order_validation
+from .product_order_validations.delete_product_order_validation import delete_product_order_validation
+
+
+
 
 # OrderValidations
 from .order_validations.create_order_validation import create_order_validation

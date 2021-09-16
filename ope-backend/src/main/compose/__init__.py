@@ -12,6 +12,8 @@ from .product.delete_product_composer import delete_product_composer
 # ProductOrderComposers
 from .product_order.create_product_order_composer import create_product_order_composer
 from .product_order.list_products_orders_composer import list_products_orders_composer
+from .product_order.update_product_order_composer import update_product_order_composer
+from .product_order.delete_product_order_composer import delete_product_order_composer
 
 # OrderComposers
 from .order.create_order_composer import create_order_composer

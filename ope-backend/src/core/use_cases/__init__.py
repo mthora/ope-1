@@ -11,10 +11,13 @@ from .product_use_cases.list_products_use_case import ListProducts
 from .product_use_cases.delete_product_use_case import DeleteProduct
 from .product_use_cases.update_product_use_case import UpdateProduct
 
+
 # ProductOrderUseCases
-from .product_order_cases.create_product_order_use_case import CreateProduct_Order
-from .product_order_cases.list_products_orders_use_case import ListProducts_Orders
-from .product_order_cases.get_product_order_by_id_use_case import GetProduct_OrderById
+from .product_order_use_cases.create_product_order_use_case import CreateProduct_Order
+from .product_order_use_cases.list_products_orders_use_case import ListProducts_Orders
+from .product_order_use_cases.get_product_order_by_id_use_case import GetProduct_OrderById
+from .product_order_use_cases.update_product_order_use_case import UpdateProduct_Order
+from .product_order_use_cases.delete_product_order_use_case import DeleteProduct_Order
 
 
 #Order
