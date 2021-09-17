@@ -1,8 +1,9 @@
 from sqlalchemy.exc import IntegrityError, NoResultFound, MultipleResultsFound
-from src.main.utils import hash_password
+from src.main.utils import hash_password, verify_password
 from src.infra.config import DBConnectionHandler
 from src.infra.db_entities import Users as User
-
+import datetime
+import jwt
 
 class UserRepository:
 
@@ -97,3 +98,27 @@ class UserRepository:
                 return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
             finally:
                 db.session.close()
+
+    @classmethod
+    def login_user(cls, email:str, password:str):
+        with DBConnectionHandler() as db:
+            try:
+                user = db.session.query(User).filter_by(email=email).first()
+                if user:
+                    print(user)
+                    if not verify_password(password ,user.password):
+                        return {"data": None, "status": 401, "errors": [f"Senha incorreta."]}
+                    token = jwt.encode(
+                        {'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=60), 'user_id': user.id,
+                         'role': user.role}, key="123456", algorithm='HS256')
+                    return {"data": token, "status": 200, "errors": []}
+                return {"data": None, "status": 404, "errors": [f"E-mail incorreto."]}
+            except IntegrityError:
+                return {"data": None, "status": 409, "errors": [f"E-mail e/ou nome de usuário já existe."]}
+            except Exception as ex:
+                print(ex)
+                db.session.rollback()
+                return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
+            finally:
+                db.session.close()
+
