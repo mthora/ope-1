@@ -109,7 +109,7 @@ class UserRepository:
                     if not verify_password(password ,user.password):
                         return {"data": None, "status": 401, "errors": [f"Senha incorreta."]}
                     token = jwt.encode(
-                        {'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=60), 'user_id': user.id,
+                        {'exp': datetime.datetime.utcnow() + datetime.timedelta(days=10), 'user_id': user.id,
                          'role': user.role}, key="123456", algorithm='HS256')
                     return {"data": token, "status": 200, "errors": []}
                 return {"data": None, "status": 404, "errors": [f"E-mail incorreto."]}
