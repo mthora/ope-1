@@ -10,6 +10,6 @@ class PatchOrderController:
             done = body["done"] if "done" in body else None
 
 
-            response = self.patch_order_use_case.update(order_id=order_id, done=done) # verificar
+            response = self.patch_order_use_case.patch_order(order_id=order_id, done=done) # verificar
             return response
         return {"data": None, "status": 400, "errors": ["Requisição inválida"]}

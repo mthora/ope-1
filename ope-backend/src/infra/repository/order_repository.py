@@ -37,9 +37,8 @@ class OrderRepository:
             except Exception as ex:
                 return {"data": None, "status": 500, "errors": ["Database connection error"]}
 
-    def patch_order(self,
-                        order_id: int,
-                        done: bool):
+
+    def patch_order(self, order_id: int, done: bool):
 
         with DBConnectionHandler() as db:
             try:
@@ -49,7 +48,7 @@ class OrderRepository:
 
                     db.session.commit()
                     return {"data": None, "status": 200, "errors": []}
-                return {"data": None, "status": 404, "errors": [f"Product de id {order_id} não existe"]}
+                return {"data": None, "status": 404, "errors": [f"Order de id {order_id} não existe"]}
             except IntegrityError:
                 return {"data": None, "status": 409, "errors": [f"Nome de produto já existe."]}
             except Exception as ex:

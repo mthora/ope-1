@@ -6,13 +6,13 @@ class PatchOrder:
     def __init__(self, order_repository):
         self.order_repository = order_repository
 
-    def update_patch(self, order_id: int, done: bool):
+    def patch_order(self, order_id: int, done: bool):
         invalid_inputs = validate(order_id=order_id,
                                   done=done)
 
         input_is_valid = len(invalid_inputs) == 0
         if input_is_valid:
-            response = self.order_repository.update_order(order_id=order_id,
+            response = self.order_repository.patch_order(order_id=order_id,
                                   done=done)#verificar
 
             return response
