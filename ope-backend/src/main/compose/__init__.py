@@ -3,6 +3,7 @@ from .user.create_user_composer import create_user_composer
 from .user.list_users_composer import list_users_composer
 from .user.update_user_composer import update_user_composer
 from .user.delete_user_composer import delete_user_composer
+from .user.login_user_composer import login_user_composer
 
 # ProductComposers
 from .product.create_product_composer import create_product_composer
