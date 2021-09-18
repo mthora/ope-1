@@ -19,8 +19,6 @@ product_order_update = product_order_namespace.model('Product_OrderToUpdate', Pr
 
 class Products_Orders(Resource):
 
-    @product_order_namespace.expect(product_order)
-
     @product_order_namespace.doc(responses={200: 'OK',
                                    400: 'Bad Request',
                                    409: "Integrity Error",
