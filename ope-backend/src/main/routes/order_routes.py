@@ -2,11 +2,12 @@ from flask_restx import Resource, Namespace
 from flask import request, jsonify, make_response
 from src.domain.dto import Order as OrderDto
 from src.main.adapters import flask_adapter
+from src.domain.dto import OrderToPatch as OrderToPatchDto
 
 from src.main.compose import create_order_composer
 from src.main.compose import list_orders_composer
 from src.main.compose.order.get_order_by_id_composer import get_order_composer
-
+from src.main.compose.product.update_product_composer import update_product_composer
 order_namespace = Namespace('orders')
 order = order_namespace.model('Order', OrderDto)
 

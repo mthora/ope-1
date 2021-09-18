@@ -4,6 +4,7 @@ from src.domain.dto import Product as ProductDto
 from src.main.adapters import flask_adapter
 from src.domain.dto import ProductToUpdate as ProductToUpdateDto
 
+
 from src.main.compose import create_product_composer
 from src.main.compose import list_products_composer
 from src.main.compose.product.delete_product_composer import delete_product_composer
