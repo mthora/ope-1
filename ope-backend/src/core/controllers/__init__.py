@@ -24,3 +24,4 @@ from .product_order_controllers.delete_product_order_controller import DeletePro
 from .order_controllers.create_order_controller import CreateOrderController
 from .order_controllers.get_order_by_id_controller import GetOrderController
 from .order_controllers.list_orders_controller import ListOrdersController
+from .order_controllers.patch_order_controller import PatchOrderController

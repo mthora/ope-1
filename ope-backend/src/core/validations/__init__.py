@@ -19,6 +19,8 @@ from .product_order_validations.delete_product_order_validation import delete_pr
 
 
 
+
 # OrderValidations
 from .order_validations.create_order_validation import create_order_validation
 from .order_validations.get_order_by_id_validation import get_order_validation
+from .order_validations.patch_order_validation import patch_order_validation
