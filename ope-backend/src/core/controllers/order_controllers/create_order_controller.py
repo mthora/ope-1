@@ -16,7 +16,7 @@ class CreateOrderController:
             obs = body["obs"] if "obs" in body else None
             confirmed = body["confirmed"] if "confirmed" in body else None
 
-            response = self.create_order_use_case.create(done=done,
+            response = self.create_order_use_case.create_order(done=done,
                                                          initial_date=initial_date,
                                                          end_date=end_date,
                                                          consumed_in=consumed_in,
