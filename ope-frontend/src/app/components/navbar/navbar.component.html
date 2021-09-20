@@ -1,0 +1,32 @@
+<mat-sidenav-container fixedInViewport="true" class="h-full">
+  <div class="bg-black text-white w-full h-12 flex justify-between items-center z-1">
+
+    <button mat-button class="h-12" (click)="drawer.toggle();">
+      <mat-icon class="text-white">menu</mat-icon>
+    </button>
+
+    <button mat-button class="h-12">
+      <mat-icon class="text-white">shopping_cart</mat-icon>
+    </button>
+</div>
+
+  <mat-sidenav #drawer class="sidenav bg-black h-screen w-3/5 text-white flex flex-col justify-between"
+                mode="over" [opened]='false'>
+      <ul class="menu-list uppercase ml-4">
+        <li class="menu-option">Promoções</li>
+        <li class="menu-option">Cardápio</li>
+        <li class="menu-option">Meus pedidos</li>
+        <li class="menu-option">Carrinho</li>
+      </ul>
+
+      <div class="flex items-center ml-4">
+        <span class="mr-4">
+          <mat-icon>person</mat-icon>
+        </span>
+        <span>Login</span>
+      </div>
+  </mat-sidenav>
+
+  <ng-content select="[main]"></ng-content>
+
+</mat-sidenav-container>
