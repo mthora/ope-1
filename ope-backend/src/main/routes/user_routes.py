@@ -31,10 +31,10 @@ class Users(Resource):
                                    409: "Integrity Error",
                                    500: "Internal Server Error"})
     def post(self):
-        try:
-            admin_route(request)
-        except:
-            return make_response(jsonify({"data": "Usuário não autorizado"}), 401)
+       # try:
+           # admin_route(request)
+       # except:
+            #return make_response(jsonify({"data": "Usuário não autorizado"}), 401)
         response = flask_adapter(request, create_user_composer())
         return make_response(jsonify(response), int(response["status"]))
 
