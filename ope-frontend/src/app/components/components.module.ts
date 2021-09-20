@@ -1,4 +1,5 @@
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -20,11 +21,14 @@ import { HomeMenuComponent } from './home-menu/home-menu.component';
     MatIconModule,
     MatProgressBarModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule,
+    MatButtonModule
   ],
   exports: [
     NavbarComponent,
-    SplashScreenComponent
+    SplashScreenComponent,
+    HomeMenuComponent
   ]
 })
 export class ComponentsModule { }

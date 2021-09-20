@@ -1,5 +1,5 @@
 <mat-sidenav-container fixedInViewport="true" class="h-full">
-  <div class="bg-black text-white w-full h-12 flex justify-between items-center z-1">
+  <div *ngIf="innerWidth < 768" class="bg-black text-white w-full h-12 flex justify-between items-center z-1">
 
     <button mat-button class="h-12" (click)="drawer.toggle();">
       <mat-icon class="text-white">menu</mat-icon>
@@ -8,6 +8,21 @@
     <button mat-button class="h-12">
       <mat-icon class="text-white">shopping_cart</mat-icon>
     </button>
+</div>
+
+<div *ngIf="innerWidth > 768" class="bg-black text-white w-full h-24 flex justify-center items-center z-1">
+
+  <button mat-button class="flex items-center h-12">
+    <mat-icon class="text-white">fastfood</mat-icon>
+  </button>
+
+  <div class="flex justify-center items-center uppercase h-12 mr-4 text-xl">Cardápio</div>
+
+  <div class="flex justify-center items-center uppercase h-12 text-xl">Promoções</div>
+
+  <button mat-button class="flex items-center h-12">
+    <mat-icon class="text-white">shopping_cart</mat-icon>
+  </button>
 </div>
 
   <mat-sidenav #drawer class="sidenav bg-black h-screen w-3/5 text-white flex flex-col justify-between"
@@ -28,5 +43,4 @@
   </mat-sidenav>
 
   <ng-content select="[main]"></ng-content>
-
 </mat-sidenav-container>
