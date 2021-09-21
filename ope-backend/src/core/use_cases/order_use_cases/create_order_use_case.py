@@ -6,7 +6,7 @@ class CreateOrder:
     def __init__(self, order_repository):
         self.order_repository = order_repository
 
-    def create(self, done: bool,
+    def create_order(self, done: bool,
                initial_date: str,
                end_date: str,
                consumed_in: str,
