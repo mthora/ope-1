@@ -6,6 +6,35 @@ from src.infra.db_entities import Orders as Order
 class OrderRepository:
 
     @classmethod
+    def create_order(cls, done: bool, initial_date: str, end_date: str,
+                     consumed_in : str, table:int, payment_method: str, obs: str,confirmed:bool ):
+        with DBConnectionHandler() as db:
+            try:
+                new_order = Order(done=done,initial_date=initial_date,end_date=end_date,consumed_in=consumed_in,
+                                      table=table, payment_method=payment_method,obs=obs,confirmed=confirmed)
+                db.session.add(new_order)
+                db.session.commit()
+                return {
+                    "data": new_order.to_dict(),
+                    "status": 201,
+                    "errors": []}
+            except IntegrityError:
+                db.session.rollback()
+                return {
+                    "data": None,
+                    "status": 409,
+                    "errors": ["Erro na requisição"]}
+            except Exception as ex:
+                print(ex)
+                db.session.rollback()
+                return {
+                    "data": None,
+                    "status": 500,
+                    "errors": ["Algo deu errado na conexão com o banco de dados"]}
+            finally:
+                db.session.close()
+
+    @classmethod
     def list_orders(cls):
         with DBConnectionHandler() as db:
             try:
