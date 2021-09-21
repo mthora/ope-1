@@ -1,0 +1,20 @@
+button.mat-focus-indicator.mat-button.mat-button-base{
+  background-color: rgba(28, 28, 28);
+  color: #fff;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  :last-of-type{
+    margin-bottom: 0;
+  }
+}
+
+.home-body{
+  height: 92%;
+}
+
+@media only screen and (min-width: 768px) {
+  .buttons{
+    width: 34rem !important;
+  }
+}
