@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, String, SmallInteger, Float, Boolean
 from src.infra.config import Base
+from sqlalchemy.orm import relationship
 
 
 class Orders(Base):
@@ -13,6 +14,8 @@ class Orders(Base):
     payment_method = Column(String(20))
     obs = Column(String(200))
     confirmed = Column(Boolean)
+    products_orders = relationship("Products_Orders", back_populates="orders")
+
 
     def to_dict(self):
         return {"id": self.id,
