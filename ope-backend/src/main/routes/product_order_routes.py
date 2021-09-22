@@ -23,6 +23,21 @@ parser.add_argument('Authorization', location='headers')
 
 class Products_Orders(Resource):
 
+    @product_order_namespace.expect(product_order)
+    @product_order_namespace.doc(responses={201: 'Created',
+                                   401: 'Unauthorized',
+                                   400: 'Bad Request',
+                                   409: "Integrity Error",
+                                   500: "Internal Server Error"})
+    def post(self):
+        try:
+            admin_route(request)
+        except:
+            return make_response(jsonify({"data": "Usuário não autorizado"}), 401)
+        response = flask_adapter(request, create_product_order_composer())
+        return make_response(jsonify(response), int(response["status"]))
+
+
     @product_order_namespace.doc(responses={200: 'OK',
                                    400: 'Bad Request',
                                    409: "Integrity Error",

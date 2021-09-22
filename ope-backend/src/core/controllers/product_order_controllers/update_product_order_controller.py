@@ -7,11 +7,13 @@ class UpdateProduct_OrderController:
 
         if body is not None:
             print("controller", body)
-            product_order_id = body["product_order_id"] if "product_order_id" in body else None
+            product_id = body["product_id"] if "product_id" in body else None
+            order_id = body["order_id"] if "product_id" in body else None
             price = body["price"] if "price" in body else None
             amount = body["amount"] if "amount" in body else None
             response = self.update_product_order_use_case.update(
-                product_order_id=product_order_id,
+                product_id=product_id,
+                order_id=order_id,
                 price=price,
                 amount=amount,
 

@@ -7,11 +7,11 @@ class Products_Orders(Base):
 
     id = Column(Integer, primary_key=True)
 
-    id_product = Column(Integer, ForeignKey('products.id'), nullable=False)
-    products = relationship("Products", foreign_keys=[id_product])
+    product_id = Column(Integer, ForeignKey('products.id'), nullable=False)
+    products = relationship("Products", back_populates="products_orders")
 
-    id_order = Column(Integer, ForeignKey('orders.id'), nullable=False)
-    order = relationship("Orders", foreign_keys=[id_order])
+    order_id = Column(Integer, ForeignKey('orders.id'), nullable=False)
+    orders = relationship("Orders", back_populates="products_orders")
 
     price = Column(Float, nullable=False)
     amount = Column(Integer, nullable=False)
@@ -20,8 +20,8 @@ class Products_Orders(Base):
     def to_dict(self):
         return {
             "id": self.id,
-            "id_product": self.id_product,
-            "id_order": self.id_order,
+            "product_id": self.product_id,
+            "order_id": self.order_id,
             "price": self.price,
             "amount": self.amount}
 

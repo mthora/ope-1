@@ -1,6 +1,6 @@
-
 from sqlalchemy import Column, Integer, String, Float, Boolean
 from src.infra.config import Base
+from sqlalchemy.orm import relationship
 
 
 class Products(Base):
@@ -13,6 +13,7 @@ class Products(Base):
     amount = Column(Integer)
     promotion = Column(Boolean)
     img = Column(String(400))
+    products_orders = relationship("Products_Orders", back_populates="products")
 
     def to_dict(self):
         return {
