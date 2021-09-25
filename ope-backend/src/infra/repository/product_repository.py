@@ -6,10 +6,10 @@ from src.infra.db_entities import Products as Product
 class ProductRepository:
 
     @classmethod
-    def create_product(cls, name: str, description: str, price: float, amount: int, promotion: bool, img: str):
+    def create_product(cls, name: str, category: str, description: str, price: float, amount: int, promotion: bool, img: str):
         with DBConnectionHandler() as db:
             try:
-                new_product = Product(name=name, description=description, price=price, amount=amount,
+                new_product = Product(name=name, category=category, description=description, price=price, amount=amount,
                                       promotion=promotion, img=img)
                 db.session.add(new_product)
                 db.session.commit()
@@ -80,6 +80,7 @@ class ProductRepository:
     def update_product(self,
                         product_id: int,
                         name: str,
+                        category: str,
                         description: str,
                         price: float,
                         amount: int,
@@ -91,6 +92,7 @@ class ProductRepository:
                 if product:
                     product.name = name
                     product.description = description
+                    product.category = category
                     product.price = price
                     product.amount = amount
                     product.promotion = promotion
