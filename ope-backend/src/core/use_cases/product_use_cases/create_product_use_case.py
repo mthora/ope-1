@@ -12,7 +12,7 @@ class CreateProduct:
                price: float,
                amount: int,
                promotion: bool,
-               img: str):
+               img: type):
         invalid_inputs = validade(
             name=name,
             description=description,
