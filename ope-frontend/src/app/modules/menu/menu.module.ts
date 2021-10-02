@@ -5,13 +5,15 @@ import { ComponentsModule } from 'src/app/components/components.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { PlatesComponent } from 'src/app/components/plates/plates.component';
 import { PlatesScreenComponent } from './plates-screen/plates-screen.component';
+import { LanchesScreenComponent } from './lanches-screen/lanches-screen.component';
 
 
 
 @NgModule({
   declarations: [
     SubMenuScreenComponent,
-    PlatesScreenComponent
+    PlatesScreenComponent,
+    LanchesScreenComponent
     
   ],
   imports: [

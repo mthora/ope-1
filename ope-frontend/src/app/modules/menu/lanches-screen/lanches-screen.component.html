@@ -2,15 +2,15 @@
   <ng-container main>
   <div class="flex flex-col items-center justify-center w-full" >
     <app-menu-header
-      title="PRATOS"
-      headerImage = "https://pixnio.com/free-images/2017/06/08/2017-06-08-15-34-19.jpg"
+      title="LANCHES"
+      headerImage = "https://i0.hippopx.com/photos/632/330/466/french-fries-fast-food-junk-food-snack-preview.jpg"
       class="w-full flex flex-col items-center justify-center mt-4 mb-8"
       >
     </app-menu-header>
 
-    <app-plates class="cursor-pointer w-full flex flex-col items-center justify-center"
+    <app-plates class="w-full flex flex-col items-center justify-center"
       [productId]="i.id"
-      *ngFor="let i of plates"
+      *ngFor="let i of lanches"
       plateName="{{i.name}}"
       platePrice="R$ {{i.price}}"
       plateDescription="{{i.description.substring(0, 60)}}"
@@ -18,6 +18,8 @@
       [maxAmount]="i.amount"
     >
     </app-plates>
+
+    <h2 *ngIf="lanches.length === 0">Este menu está vazio!</h2>
 
   </div>
   </ng-container>

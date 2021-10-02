@@ -27,7 +27,7 @@
   <mat-sidenav #drawer class="sidenav bg-black h-screen w-3/5 text-white flex flex-col justify-between"
                 mode="over" [opened]='false'>
       <ul class="menu-list uppercase ml-4">
-        <li class="menu-option">Promoções</li>
+        <li [routerLink]="''" class="menu-option">Promoções</li>
         <li class="menu-option"><a (click)='navigate("cardapio")'>Cardápio</a></li>
         <li class="menu-option">Meus pedidos</li>
         <li class="menu-option">Carrinho</li>

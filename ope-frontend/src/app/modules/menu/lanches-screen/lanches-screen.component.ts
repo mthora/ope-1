@@ -2,13 +2,13 @@ import { ProductsService } from './../../../services/products.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-plates-screen',
-  templateUrl: './plates-screen.component.html',
-  styleUrls: ['./plates-screen.component.scss']
+  selector: 'app-lanches-screen',
+  templateUrl: './lanches-screen.component.html',
+  styleUrls: ['./lanches-screen.component.scss']
 })
-export class PlatesScreenComponent implements OnInit {
+export class LanchesScreenComponent implements OnInit {
 
-  constructor(private _products: ProductsService) { }
+  constructor(private _products : ProductsService) { }
 
   ngOnInit() {
     this.getProducts();
@@ -20,7 +20,7 @@ export class PlatesScreenComponent implements OnInit {
                 (response) => {
                     console.log(response);
                     this.products = response.data;
-                    this.plates = this.products.filter((item)=>item.category=="prato")
+                    this.lanches = this.products.filter((item)=>item.category=="lanche")
                 },
                 (response) => {
                     console.log(response);
@@ -29,5 +29,6 @@ export class PlatesScreenComponent implements OnInit {
   }
 
   products: any[] = [];
-  plates: any[] = [];
+  lanches: any[] = [];
+
 }
