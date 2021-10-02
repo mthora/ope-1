@@ -12,7 +12,8 @@
   </div>
 
   <div class="buttons w-56 flex-col items-center justify-center ">
-    <button class="w-full" mat-button>Cardápio</button>
+    <button *ngIf="this._userRole == 1" class="w-full" mat-button>Editar Cardápio</button>
+    <button (click)='navigate("cardapio")' *ngIf="this._userRole != 1" class="w-full" mat-button>Cardápio</button>
     <button class="w-full" mat-button>Meus pedidos</button>
     <button class="w-full" mat-button>Carrinho</button>
   </div>

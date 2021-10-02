@@ -1,6 +1,5 @@
 <mat-sidenav-container fixedInViewport="true" class="h-full">
-  <div *ngIf="innerWidth < 768" class="bg-black text-white w-full h-12 flex justify-between items-center z-1">
-
+  <div *ngIf="innerWidth <= 768" class="bg-black text-white w-full h-12 flex justify-between items-center z-1">
     <button mat-button class="h-12" (click)="drawer.toggle();">
       <mat-icon class="text-white">menu</mat-icon>
     </button>
@@ -12,15 +11,15 @@
 
 <div *ngIf="innerWidth > 768" class="bg-black text-white w-full h-24 flex justify-center items-center z-1">
 
-  <button mat-button class="flex items-center h-12">
+  <button [routerLink]="''" mat-button class="flex items-center h-12">
     <mat-icon class="text-white">fastfood</mat-icon>
   </button>
 
-  <div class="flex justify-center items-center uppercase h-12 mr-4 text-xl">Cardápio</div>
+  <button (click)='navigate("cardapio")' mat-button class="flex items-center h-12">
+    <mat-icon class="text-white">restaurant_menu</mat-icon>
+  </button>
 
-  <div class="flex justify-center items-center uppercase h-12 text-xl">Promoções</div>
-
-  <button mat-button class="flex items-center h-12">
+  <button (click)='navigate("carrinho")' mat-button class="flex items-center h-12">
     <mat-icon class="text-white">shopping_cart</mat-icon>
   </button>
 </div>
@@ -29,17 +28,10 @@
                 mode="over" [opened]='false'>
       <ul class="menu-list uppercase ml-4">
         <li class="menu-option">Promoções</li>
-        <li class="menu-option">Cardápio</li>
+        <li class="menu-option"><a (click)='navigate("cardapio")'>Cardápio</a></li>
         <li class="menu-option">Meus pedidos</li>
         <li class="menu-option">Carrinho</li>
       </ul>
-
-      <div class="flex items-center ml-4">
-        <span class="mr-4">
-          <mat-icon>person</mat-icon>
-        </span>
-        <span>Login</span>
-      </div>
   </mat-sidenav>
 
   <ng-content select="[main]"></ng-content>

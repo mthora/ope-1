@@ -1,0 +1,36 @@
+.menu-item {
+  background-position: center;
+  background-size: cover;
+}
+
+.darken-layer{
+  opacity: 50%;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+.darken-layer:hover {
+  opacity: 75%;
+  cursor: pointer;
+}
+
+.menu-item p {
+  color: #FFFFFF;
+}
+
+.pratos-sub-menu {
+  background-image: url("https://pixnio.com/free-images/2017/06/08/2017-06-08-15-34-19.jpg");
+}
+
+.lanches-sub-menu {
+  background-image: url("https://i0.hippopx.com/photos/632/330/466/french-fries-fast-food-junk-food-snack-preview.jpg");
+}
+
+.bebidas-sub-menu {
+  background-image: url("https://www.publicdomainpictures.net/pictures/230000/nahled/chocolate-ice-cream-dessert.jpg");
+}
+
+.promocoes-sub-menu {
+  background-image: url("https://http2.mlstatic.com/D_NQ_NP_997293-MLB26883974285_022018-O.jpg");
+}
