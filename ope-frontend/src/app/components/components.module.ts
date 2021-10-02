@@ -1,9 +1,11 @@
+import { PlatesComponent } from './plates/plates.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatInputModule} from '@angular/material/input';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule} from '@angular/material/menu';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -23,6 +25,7 @@ import { MenuHeaderComponent } from './menu-header/menu-header.component';
     HomeMenuComponent,
     NotFoundComponent,
     LoginComponent,
+    PlatesComponent,
     MenuHeaderComponent
   ],
   imports: [
@@ -34,6 +37,7 @@ import { MenuHeaderComponent } from './menu-header/menu-header.component';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
+    MatMenuModule,
     FormsModule,
     RouterModule,
     ReactiveFormsModule
@@ -44,7 +48,8 @@ import { MenuHeaderComponent } from './menu-header/menu-header.component';
     HomeMenuComponent,
     NotFoundComponent,
     LoginComponent,
-    MenuHeaderComponent
+    MenuHeaderComponent,
+    PlatesComponent
   ]
 })
 export class ComponentsModule { }

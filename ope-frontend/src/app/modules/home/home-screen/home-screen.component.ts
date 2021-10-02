@@ -12,6 +12,6 @@ export class HomeScreenComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(()=>{
       this.splashShows = false;
-    }, 2500)
+    }, 1000)
   }
 }

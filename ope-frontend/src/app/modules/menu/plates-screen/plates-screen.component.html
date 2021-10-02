@@ -1,11 +1,21 @@
 <app-navbar>
   <ng-container main>
   <div class="flex flex-col items-center justify-center w-full" >
-    <app-menu-header title="PRATOS" headerImage = "https://pixnio.com/free-images/2017/06/08/2017-06-08-15-34-19.jpg">
-      
+    <app-menu-header
+      title="PRATOS"
+      headerImage = "https://pixnio.com/free-images/2017/06/08/2017-06-08-15-34-19.jpg"
+      class="w-full flex flex-col items-center justify-center mt-4 mb-8"
+      >
     </app-menu-header>
+
+    <app-plates class="w-full flex flex-col items-center justify-center" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]"
+      plateName="NHOQUE DE BATATA"
+      platePrice="R$12.99"
+      plateDescription="Delicioso nhoque feito de batatas deliciosas mmmm"
+      plateImage="https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-1919-edb1a97a66751a6c612b62e703ca1e7d.jpg"
+    >
+    </app-plates>
+
   </div>
-
-
   </ng-container>
 </app-navbar>
