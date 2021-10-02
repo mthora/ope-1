@@ -13,6 +13,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MenuHeaderComponent } from './menu-header/menu-header.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SplashScreenComponent,
     HomeMenuComponent,
     NotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    MenuHeaderComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +43,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SplashScreenComponent,
     HomeMenuComponent,
     NotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    MenuHeaderComponent
   ]
 })
 export class ComponentsModule { }
