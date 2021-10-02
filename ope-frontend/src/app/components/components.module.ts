@@ -1,9 +1,11 @@
+import { PlatesComponent } from './plates/plates.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatInputModule} from '@angular/material/input';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule} from '@angular/material/menu';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -13,6 +15,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MenuHeaderComponent } from './menu-header/menu-header.component';
 
 
 @NgModule({
@@ -21,7 +24,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SplashScreenComponent,
     HomeMenuComponent,
     NotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    PlatesComponent,
+    MenuHeaderComponent
   ],
   imports: [
     CommonModule,
@@ -32,6 +37,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
+    MatMenuModule,
     FormsModule,
     RouterModule,
     ReactiveFormsModule
@@ -41,7 +47,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SplashScreenComponent,
     HomeMenuComponent,
     NotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    MenuHeaderComponent,
+    PlatesComponent
   ]
 })
 export class ComponentsModule { }
