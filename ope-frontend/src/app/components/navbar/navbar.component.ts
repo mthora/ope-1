@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -7,20 +8,23 @@ import { Component, HostListener, Input, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
-
-  containerShows: boolean = false;
-  innerWidth: any;
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
   }
+  containerShows: boolean = false;
+  innerWidth: any;
+
+  @Input()
+  appComponent: any;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.innerWidth = window.innerWidth;
   }
 
-  @Input()
-  appComponent: any;
+  navigate(screen: string): void{
+    this.router.navigateByUrl(screen);
+  }
 }
