@@ -8,7 +8,7 @@
         {{plateName}}
       </span>
       <span class="font-sm font-bold">
-        {{platePrice}}
+        R${{toFloat(platePrice)}}
       </span>
     </div>
     <div class="w-full flex align-end justify-between">
@@ -33,8 +33,8 @@
             </button>
           </span>
         </div>
-          <button (click)="updateCart()" class="add_btn w-full mt-2" mat-button>
-            Adicionar ao carrinho
+          <button [ngClass]="{'bg-red': this.plateAmount == 0}" (click)="updateCart()" class="add_btn w-full mt-2" mat-button>
+            {{this.plateAmount == 0? "Remover do carrinho" : "Adicionar ao carrinho" }}
           </button>
         </div>
       </mat-menu>

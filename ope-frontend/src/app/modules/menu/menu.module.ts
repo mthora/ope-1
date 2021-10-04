@@ -8,13 +8,11 @@ import { PlatesScreenComponent } from './plates-screen/plates-screen.component';
 import { LanchesScreenComponent } from './lanches-screen/lanches-screen.component';
 
 
-
 @NgModule({
   declarations: [
     SubMenuScreenComponent,
     PlatesScreenComponent,
-    LanchesScreenComponent
-    
+    LanchesScreenComponent,
   ],
   imports: [
     CommonModule,

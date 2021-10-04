@@ -4,7 +4,7 @@
       <mat-icon class="text-white">menu</mat-icon>
     </button>
 
-    <button mat-button class="h-12">
+    <button (click)='navigate("carrinho")' mat-button class="h-12">
       <mat-icon class="text-white">shopping_cart</mat-icon>
     </button>
 </div>
@@ -30,7 +30,7 @@
         <li [routerLink]="''" class="menu-option">Promoções</li>
         <li class="menu-option"><a (click)='navigate("cardapio")'>Cardápio</a></li>
         <li class="menu-option">Meus pedidos</li>
-        <li class="menu-option">Carrinho</li>
+        <li class="menu-option"><a (click)='navigate("carrinho")'>Carrinho</a></li>
       </ul>
   </mat-sidenav>
 

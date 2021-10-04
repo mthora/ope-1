@@ -12,7 +12,6 @@ export class ProductsService {
   private _urlProducts: string = `${environment.urlServer}products/`
   constructor(private _httpClient: HttpClient, private _auth: AuthService) { }
 
-
   getProducts(): Observable<any> {
     return this._httpClient.get(this._urlProducts, {headers: new HttpHeaders()
       .set('Authorization', `Bearer ${this._auth.accessToken}`)})
@@ -22,5 +21,5 @@ export class ProductsService {
             return of(response);
         })
     );
-}
+  }
 }

@@ -1,3 +1,4 @@
+import { CartModule } from './modules/cart/cart.module';
 import { MenuModule } from './modules/menu/menu.module';
 import { ComponentsModule } from './components/components.module';
 import { HomeModule } from './modules/home/home.module';
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HomeModule,
     MenuModule,
+    CartModule,
     BrowserAnimationsModule,
     ComponentsModule,
     HttpClientModule

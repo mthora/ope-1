@@ -6,6 +6,7 @@ import { HomeScreenComponent } from './modules/home/home-screen/home-screen.comp
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PlatesScreenComponent } from './modules/menu/plates-screen/plates-screen.component';
 import { LanchesScreenComponent } from './modules/menu/lanches-screen/lanches-screen.component';
+import { CartConfirmScreenComponent } from './modules/cart/cart-confirm-screen/cart-confirm-screen.component';
 
 const routes: Routes = [
   {path: '', component: HomeScreenComponent },
@@ -15,7 +16,9 @@ const routes: Routes = [
     {path: 'pratos', component: PlatesScreenComponent},
     {path: 'lanches', component: LanchesScreenComponent},
   ]},
-
+  {path: 'carrinho', children: [
+    {path: '', component: CartConfirmScreenComponent}
+  ]},
 
   {path: '404', component: NotFoundComponent},
   {path: '**', redirectTo: '/404'}
