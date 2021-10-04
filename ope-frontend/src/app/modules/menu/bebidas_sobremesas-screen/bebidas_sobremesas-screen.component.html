@@ -1,0 +1,26 @@
+<app-navbar>
+  <ng-container main>
+  <div class="flex flex-col items-center justify-center w-full" >
+    <app-menu-header
+      title="BEBIDAS E SOBREMESAS"
+      headerImage = "https://i0.hippopx.com/photos/632/330/466/french-fries-fast-food-junk-food-snack-preview.jpg"
+      class="w-full flex flex-col items-center justify-center mt-4 mb-8"
+      >
+    </app-menu-header>
+
+    <app-plates class="w-full flex flex-col items-center justify-center"
+      [productId]="i.id"
+      *ngFor="let i of bebidas_sobremesas"
+      plateName="{{i.name}}"
+      platePrice="{{i.price}}"
+      plateDescription="{{i.description.substring(0, 60)}}"
+      plateImage="{{i.img}}"
+      [maxAmount]="i.amount"
+    >
+    </app-plates>
+
+    <h2 *ngIf="bebidas_sobremesas.length === 0">Este menu está vazio!</h2>
+
+  </div>
+  </ng-container>
+</app-navbar>
