@@ -43,10 +43,6 @@ class Products_Orders(Resource):
                                    409: "Integrity Error",
                                    500: "Internal Server Error"})
     def get(self):
-        try:
-            admin_route(request)
-        except:
-            return make_response(jsonify({"data": "Usuário Não autorizado"}), 401)
         response = flask_adapter(request, list_products_orders_composer())
         return make_response(jsonify(response), int(response["status"]))
 
@@ -77,10 +73,6 @@ class Product_OrderActions(Resource):
                                    404: "Not Found",
                                    500: "Internal Server Error"})
     def get(self, id):
-        try:
-            admin_route(request)
-        except:
-            return make_response(jsonify({"data": "Usuário não autorizado"}), 401)
         response = flask_adapter(request=request, composer=get_product_order_composer(), arg=id)
         return make_response(jsonify(response), int(response["status"]))
 
