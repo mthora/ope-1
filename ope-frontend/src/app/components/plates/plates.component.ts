@@ -30,13 +30,19 @@ export class PlatesComponent implements OnInit {
 
   removeAmount($event:any) : void {
     $event.stopPropagation();
-    this.plateAmount > 1 ? this.plateAmount-=1 : this.plateAmount = 1;
+    this.plateAmount > 0 ? this.plateAmount-=1 : this.plateAmount = 0;
+  }
+
+  toFloat(value: string) : string {
+    return parseFloat(value).toFixed(2);
   }
 
   updateCart(){
     this.chosenProducts = {
       "product_id": this.productId,
-      "amount": this.plateAmount
+      "amount": this.plateAmount,
+      "name": this.plateName,
+      "price": this.platePrice
     }
 
     this._cart.addToCart(this.chosenProducts)

@@ -1,30 +1,45 @@
 import { AuthService } from 'src/app/services/auth.service';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  private _urlProducts: string = `${environment.urlServer}product_orders/`
   private _cart: any[] = [];
-  constructor(private _httpClient: HttpClient, private _auth: AuthService) { }
+  constructor(private _auth: AuthService) { }
 
-  set order(product_order: string)
+  set order(product_order: any)
   {
     localStorage.setItem('order', product_order);
   }
 
-  get order(): string
+  get order(): any
   {
     const order = JSON.parse(localStorage.getItem('order') || '[]');
     return order;
   }
 
   addToCart(product_order: any): Observable<any>{
+
+    const countProductInOrder = this._cart.filter((item)=>{
+      const productInCart = JSON.parse(item);
+      return productInCart["product_id"] == product_order["product_id"];
+    })
+
+    if (countProductInOrder.length != 0){
+        this._cart = this._cart.filter((item)=>{
+          const productInCart = JSON.parse(item);
+          return ((productInCart["product_id"] != product_order["product_id"]));
+        })
+        this.order = JSON.stringify(this._cart);
+    }
+
+    if (product_order["amount"] === 0){
+      this.order = JSON.stringify(this._cart);
+      return of(this._cart);
+    }
+
     this._cart.push(JSON.stringify(product_order));
     this.order = JSON.stringify(this._cart);
     return of(this._cart);

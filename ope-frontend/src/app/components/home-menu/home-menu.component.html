@@ -15,7 +15,6 @@
     <button (click)='navigate("cardapio")' *ngIf="this._userRole == 1" class="w-full" mat-button>Editar Cardápio</button>
     <button (click)='navigate("cardapio")' *ngIf="this._userRole != 1" class="w-full" mat-button>Cardápio</button>
     <button  *ngIf="this._userRole == 1" class="w-full" mat-button>Pedidos em andamento</button>
-    <button  *ngIf="this._userRole != 1" class="w-full" mat-button>Meus pedidos</button>
     <button  *ngIf="this._userRole == 1" class="w-full" mat-button>Relatórios</button>
     <button  *ngIf="this._userRole != 1" class="w-full" mat-button>Carrinho</button>
   </div>

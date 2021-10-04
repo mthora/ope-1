@@ -1,0 +1,16 @@
+<div class="bg-gray-200 w-full h-48 p-4">
+  <div *ngFor="let item of orderList" class="flex items-center">
+    <span>
+      <button mat-button>
+        <mat-icon>remove</mat-icon>
+      </button>
+    </span>
+    <span>{{item.amount}}</span>
+    <span>
+      <button mat-button>
+        <mat-icon>add</mat-icon>
+      </button>
+    </span>
+    <span class="uppercase">{{item.name}}</span>
+  </div>
+</div>

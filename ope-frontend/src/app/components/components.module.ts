@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuHeaderComponent } from './menu-header/menu-header.component';
+import { OrderComponent } from './order/order.component';
 
 
 @NgModule({
@@ -26,7 +27,9 @@ import { MenuHeaderComponent } from './menu-header/menu-header.component';
     NotFoundComponent,
     LoginComponent,
     PlatesComponent,
-    MenuHeaderComponent
+    MenuHeaderComponent,
+    OrderComponent,
+    OrderComponent
   ],
   imports: [
     CommonModule,
@@ -49,6 +52,7 @@ import { MenuHeaderComponent } from './menu-header/menu-header.component';
     NotFoundComponent,
     LoginComponent,
     MenuHeaderComponent,
+    OrderComponent,
     PlatesComponent
   ]
 })

@@ -1,0 +1,48 @@
+<app-navbar>
+  <ng-container main>
+
+    <!-- Caso tenha produtos no carrinho: -->
+    <div class="m-8 flex flex-col justify-around h-2/3" *ngIf="hasProducts">
+      <div class="text-xl uppercase">Resumo do pedido:</div>
+
+        <app-order></app-order>
+
+        <mat-radio-group
+          aria-labelledby="entrega"
+          class="flex items-center justify-between">
+          <mat-radio-button class="example-radio-button uppercase mr-2" *ngFor="let delivery of deliveryOptions" [value]="delivery">
+            {{delivery}}
+          </mat-radio-button>
+        </mat-radio-group>
+
+        <mat-form-field class="w-full" appearance="fill">
+          <mat-label>FORMA DE PAGAMENTO</mat-label>
+          <mat-select>
+            <mat-option value="option1">Pagar com PIX</mat-option>
+            <mat-option value="option2">Cartão de crédito</mat-option>
+            <mat-option value="option3">Cartão de débito</mat-option>
+            <mat-option value="option3">Dinheiro</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div>
+          <div class="font-bold">Subtotal: <span class="font-normal">R$ {{orderSum.toFixed(2)}}</span></div>
+          <div class="font-bold">Gorjeta: <span class="font-normal">R$ {{tip.toFixed(2)}}</span></div>
+          <div class="font-bold">Total: <span class="font-normal">R$ {{(orderSum + tip).toFixed(2)}}</span></div>
+        </div>
+
+        <button class="goto_menu" mat-button>FINALIZAR PEDIDO</button>
+    </div>
+
+    <!-- Caso o carrinho esteja vazio: -->
+    <div *ngIf="!hasProducts" class="flex flex-col items-center justify-center h-5/6">
+      <div>
+        <mat-icon class="text-gray-400 text-5xl mb-8">fastfood</mat-icon>
+      </div>
+      <p class="text-gray-400">O carrinho está vazio</p>
+      <p class="text-gray-400">Adicione ítens para finalizar o seu pedido.</p>
+
+      <button class="goto_menu" mat-button (click)="navigate('cardapio')">IR PARA O CARDÁPIO</button>
+    </div>
+  </ng-container>
+</app-navbar>
