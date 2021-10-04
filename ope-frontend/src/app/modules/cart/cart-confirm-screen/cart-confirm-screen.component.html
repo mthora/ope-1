@@ -2,7 +2,7 @@
   <ng-container main>
 
     <!-- Caso tenha produtos no carrinho: -->
-    <div class="m-8" *ngIf="hasProducts">
+    <div class="m-8 flex flex-col justify-around h-2/3" *ngIf="hasProducts">
       <div class="text-xl uppercase">Resumo do pedido:</div>
 
         <app-order></app-order>
@@ -10,7 +10,7 @@
         <mat-radio-group
           aria-labelledby="entrega"
           class="flex items-center justify-between">
-          <mat-radio-button class="example-radio-button uppercase" *ngFor="let delivery of deliveryOptions" [value]="delivery">
+          <mat-radio-button class="example-radio-button uppercase mr-2" *ngFor="let delivery of deliveryOptions" [value]="delivery">
             {{delivery}}
           </mat-radio-button>
         </mat-radio-group>
@@ -30,6 +30,8 @@
           <div class="font-bold">Gorjeta: <span class="font-normal">R$ {{tip.toFixed(2)}}</span></div>
           <div class="font-bold">Total: <span class="font-normal">R$ {{(orderSum + tip).toFixed(2)}}</span></div>
         </div>
+
+        <button class="goto_menu" mat-button>FINALIZAR PEDIDO</button>
     </div>
 
     <!-- Caso o carrinho esteja vazio: -->
