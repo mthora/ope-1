@@ -1,0 +1,44 @@
+<div class="h-32 w-5/6 flex mb-8 shadow-sm bg-white">
+  <div class="h-32 w-32">
+    <img class="h-full object-cover" src={{bebida_sobremesaImage}}>
+  </div>
+  <div class="w-full flex flex-col justify-around p-4">
+    <div class="flex justify-between">
+      <span class="font-sm font-bold">
+        {{bebida_sobremesaName}}
+      </span>
+      <span class="font-sm font-bold">
+        {{bebida_sobremesaPrice}}
+      </span>
+    </div>
+    <div class="w-full flex align-end justify-between">
+      <span class="font-xs">{{bebida_sobremesaDescription}}</span>
+      <button mat-button [mat-menu-trigger-for]="addToCart">
+        <mat-icon>add_shopping_cart</mat-icon>
+      </button>
+
+      <mat-menu #addToCart>
+        <div class="p-4">
+        <div class="mb-4">
+          <span>
+            Quantidade
+          </span>
+          <span>
+            <button (click)="removeAmount($event)" mat-button>
+              <mat-icon>remove</mat-icon>
+            </button>
+            <span class="p-2">{{bebida_sobremesaAmount}}</span>
+            <button (click)="addAmount($event)" mat-button>
+              <mat-icon>add</mat-icon>
+            </button>
+          </span>
+        </div>
+          <button (click)="updateCart()" class="add_btn w-full mt-2" mat-button>
+            Adicionar ao carrinho
+          </button>
+        </div>
+      </mat-menu>
+    </div>
+
+  </div>
+</div>

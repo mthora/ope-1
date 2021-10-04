@@ -6,6 +6,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { PlatesComponent } from 'src/app/components/plates/plates.component';
 import { PlatesScreenComponent } from './plates-screen/plates-screen.component';
 import { LanchesScreenComponent } from './lanches-screen/lanches-screen.component';
+import { Bebidas_SobremesasScreenComponent } from './bebidas_sobremesas-screen/bebidas_sobremesas-screen.component';
 
 
 
@@ -13,7 +14,8 @@ import { LanchesScreenComponent } from './lanches-screen/lanches-screen.componen
   declarations: [
     SubMenuScreenComponent,
     PlatesScreenComponent,
-    LanchesScreenComponent
+    LanchesScreenComponent,
+    Bebidas_SobremesasScreenComponent
     
   ],
   imports: [
