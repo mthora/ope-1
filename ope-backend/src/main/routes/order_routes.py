@@ -41,7 +41,7 @@ class Orders(Resource):
                                    409: "Integrity Error",
                                    404: "Not Found",
                                    500: "Internal Server Error"})
-    def put (self):
+    def put(self):
         response = flask_adapter(request, patch_order_composer())
         return make_response(jsonify(response), int(response["status"]))
 
