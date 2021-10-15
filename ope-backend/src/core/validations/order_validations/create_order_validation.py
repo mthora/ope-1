@@ -22,7 +22,7 @@ def create_order_validation(
         message.append("Mesa inválida")
     if not isinstance(payment_method, int) or payment_method is None or payment_method == "":
         message.append("Forma de pagamento inválida")
-    if not isinstance(obs, str):
+    if not isinstance(obs, str) and obs != "":
         message.append("Observação inválida")
     if not isinstance(confirmed, bool) or confirmed is None:
         message.append("Ocorreu um erro na requisição")
