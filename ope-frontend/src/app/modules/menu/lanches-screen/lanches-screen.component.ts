@@ -20,7 +20,7 @@ export class LanchesScreenComponent implements OnInit {
                 (response) => {
                     console.log(response);
                     this.products = response.data;
-                    this.lanches = this.products.filter((item)=>item.category=="lanche")
+                    this.lanches = this.products.filter((item)=>item.category==2)
                 },
                 (response) => {
                     console.log(response);

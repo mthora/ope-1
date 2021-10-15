@@ -8,6 +8,9 @@ import { CartConfirmScreenComponent } from './cart-confirm-screen/cart-confirm-s
 import {MatRadioModule} from '@angular/material/radio';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,11 @@ import {MatSelectModule} from '@angular/material/select';
     MatButtonModule,
     MatRadioModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatInputModule,
+    FormsModule,
+    RouterModule,
+    ReactiveFormsModule
   ]
 })
 export class CartModule { }

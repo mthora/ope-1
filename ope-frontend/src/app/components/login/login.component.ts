@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
   }
 
   loginWithCredentials(): void {
-    console.log("login-component");
     const credentialsJson = this.credentials.value
     this._auth.signIn(credentialsJson)
             .subscribe(

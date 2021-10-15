@@ -18,9 +18,8 @@ export class Bebidas_SobremesasScreenComponent implements OnInit {
     this._products.getProducts()
             .subscribe(
                 (response) => {
-                    console.log(response);
                     this.products = response.data;
-                    this.bebidas_sobremesas = this.products.filter((item)=>item.category=="bebida_sobremesa")
+                    this.bebidas_sobremesas = this.products.filter((item)=>item.category==3 && item.amount > 0)
                 },
                 (response) => {
                     console.log(response);

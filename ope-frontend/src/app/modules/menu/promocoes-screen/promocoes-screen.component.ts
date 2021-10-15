@@ -20,7 +20,7 @@ export class PromocoesScreenComponent implements OnInit {
                 (response) => {
                     console.log(response);
                     this.products = response.data;
-                    this.promocoes = this.products.filter((item)=>item.promotion === true)
+                    this.promocoes = this.products.filter((item)=>item.promotion === true && item.amount > 0)
                 },
                 (response) => {
                     console.log(response);

@@ -14,7 +14,6 @@ export class HomeMenuComponent implements OnInit {
   ngOnInit(): void {
     this._token = localStorage.getItem("authentication");
     this._user = this._auth.getUserId();
-    console.log('user', this._user);
     this._userId = this._user['user_id'];
     this._userRole = this._user['role'];
   }

@@ -20,7 +20,7 @@ export class PlatesScreenComponent implements OnInit {
                 (response) => {
                     console.log(response);
                     this.products = response.data;
-                    this.plates = this.products.filter((item)=>item.category=="prato")
+                    this.plates = this.products.filter((item)=>item.category==1 && item.amount > 0)
                 },
                 (response) => {
                     console.log(response);
