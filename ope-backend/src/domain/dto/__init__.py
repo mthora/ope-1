@@ -7,4 +7,5 @@ from .product_to_update_dto import ProductToUpdate
 from .product_order_to_update_dto import Product_OrderToUpdate
 from .order_to_patch_dto import OrderToPatch
 from .login_user_dto import LoginUser
-
+from .confirm_order_dto import ConfirmOrder
+from .product_remove_amount_dto import ProductRemoveAmount

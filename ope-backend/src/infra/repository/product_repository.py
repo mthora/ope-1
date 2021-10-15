@@ -6,7 +6,7 @@ from src.infra.db_entities import Products as Product
 class ProductRepository:
 
     @classmethod
-    def create_product(cls, name: str, category: str, description: str, price: float, amount: int, promotion: bool, img: str):
+    def create_product(cls, name: str, category: int, description: str, price: float, amount: int, promotion: bool, img: str):
         with DBConnectionHandler() as db:
             try:
                 new_product = Product(name=name, category=category, description=description, price=price, amount=amount,
@@ -102,6 +102,26 @@ class ProductRepository:
                 return {"data": None, "status": 404, "errors": [f"Product de id {product_id} não existe"]}
             except IntegrityError:
                 return {"data": None, "status": 409, "errors": [f"Nome de produto já existe."]}
+            except Exception as ex:
+                print(ex)
+                db.session.rollback()
+                return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
+            finally:
+                db.session.close()
+
+    def remove_product_amount(self,
+                        product_id: int,
+                        amount_to_remove: int):
+        with DBConnectionHandler() as db:
+            try:
+                product = db.session.query(Product).filter_by(id=product_id).first()
+                if product:
+                    product.amount-=amount_to_remove
+                    if product.amount < 0:
+                        return {"data": None, "status": 400, "errors": ["A quantidade comprada é maior do que a disponível"]}
+                    db.session.commit()
+                    return {"data": None, "status": 200, "errors": []}
+                return {"data": None, "status": 404, "errors": [f"Product de id {product_id} não existe"]}
             except Exception as ex:
                 print(ex)
                 db.session.rollback()

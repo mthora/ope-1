@@ -1,7 +1,7 @@
 from sqlalchemy.exc import IntegrityError, NoResultFound, MultipleResultsFound
 from src.infra.config import DBConnectionHandler
 from src.infra.db_entities import Orders as Order
-
+from datetime import datetime
 
 class OrderRepository:
 
@@ -66,20 +66,32 @@ class OrderRepository:
             except Exception as ex:
                 return {"data": None, "status": 500, "errors": ["Database connection error"]}
 
+    def confirm_order(self, order_id, confirmed: bool):
+        with DBConnectionHandler() as db:
+            try:
+                order = db.session.query(Order).filter_by(id=order_id).first()
+                if order:
+                    order.confirmed = confirmed
+                    db.session.commit()
+                    return {"data": None, "status": 200, "errors": []}
+                return {"data": None, "status": 404, "errors": [f"Order de id {order_id} não existe"]}
+            except Exception as ex:
+                print(ex)
+                db.session.rollback()
+                return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
+            finally:
+                db.session.close()
 
     def patch_order(self, order_id: int, done: bool):
-
         with DBConnectionHandler() as db:
             try:
                 order = db.session.query(Order).filter_by(id=order_id).first()
                 if order:
                     order.done = done
-
+                    order.end_date = datetime.now()
                     db.session.commit()
                     return {"data": None, "status": 200, "errors": []}
                 return {"data": None, "status": 404, "errors": [f"Order de id {order_id} não existe"]}
-            except IntegrityError:
-                return {"data": None, "status": 409, "errors": [f"Nome de produto já existe."]}
             except Exception as ex:
                 print(ex)
                 db.session.rollback()

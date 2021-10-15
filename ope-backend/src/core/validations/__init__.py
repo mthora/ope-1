@@ -9,6 +9,7 @@ from .user_validations.login_user_validation import login_user_validation
 from .product_validations.create_product_validation import create_product_validation
 from .product_validations.delete_product_validation import delete_product_validation
 from .product_validations.update_product_validation import update_product_validation
+from .product_validations.remove_amount_validation import remove_amount_validation
 
 # ProductOrderValidations
 from .product_order_validations.create_product_order_validation import create_product_order_validation

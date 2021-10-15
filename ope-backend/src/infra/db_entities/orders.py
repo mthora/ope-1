@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, SmallInteger, Float, Boolean
+from sqlalchemy import Column, Integer, String, SmallInteger, Float, Boolean, DateTime
 from src.infra.config import Base
 from sqlalchemy.orm import relationship
 
@@ -7,8 +7,8 @@ class Orders(Base):
     __tablename__ = 'orders'
     id = Column(Integer, primary_key=True)
     done = Column(Boolean)
-    initial_date = Column(String(20))
-    end_date = Column(String(20))
+    initial_date = Column(DateTime)
+    end_date = Column(DateTime, nullable=True)
     consumed_in = Column(String(20))
     table = Column(Integer)
     payment_method = Column(String(20))

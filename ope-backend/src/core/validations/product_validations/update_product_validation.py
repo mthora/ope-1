@@ -1,7 +1,7 @@
 def update_product_validation(
         product_id: int,
         name: str,
-        category: str,
+        category: int,
         description: str,
         price: float,
         amount: int,
@@ -12,7 +12,7 @@ def update_product_validation(
         message.append("Produto inválido")
     if not isinstance(name, str) or name is None or name == "":
         message.append("Nome inválido")
-    if not isinstance(category, str) or category is None or category == "":
+    if not isinstance(category, int) or category is None or category < 1 or category > 3:
         message.append("Categoria inválida")
     if not isinstance(description, str) or description is None or description == "":
         message.append("Descição inválida")

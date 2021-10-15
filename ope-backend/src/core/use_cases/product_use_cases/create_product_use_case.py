@@ -8,7 +8,7 @@ class CreateProduct:
 
     def create(self, name: str,
                description: str,
-               category: str,
+               category: int,
                price: float,
                amount: int,
                promotion: bool,
