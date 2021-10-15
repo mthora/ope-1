@@ -1,0 +1,29 @@
+<app-navbar>
+  <ng-container main>
+    <div class="flex flex-col h-full items-center justify-around">
+      <div (click)="navigate('cardapio/pratos')" class="menu-item pratos-sub-menu flex items-center justify-center w-5/6 h-1/5 bg-black">
+        <div class="darken-layer flex items-center justify-center">
+          <p class="text-2xl">PRATOS</p>
+        </div>
+      </div>
+
+      <div (click)="navigate('cardapio/lanches')" class="menu-item lanches-sub-menu flex items-center justify-center w-5/6 h-1/5 bg-black">
+        <div class="darken-layer flex items-center justify-center">
+          <p class="text-2xl">LANCHES</p>
+        </div>
+      </div>
+
+      <div (click)="navigate('cardapio/bebidas_sobremesas')" class="menu-item bebidas-sub-menu flex items-center justify-center w-5/6 h-1/5 bg-black">
+        <div class="darken-layer flex items-center justify-center">
+          <p class="text-2xl">BEBIDAS E SOBREMESAS</p>
+        </div>
+      </div>
+
+      <div (click)="navigate('cardapio/promocoes')" class="menu-item promocoes-sub-menu flex items-center justify-center w-5/6 h-1/5 bg-black">
+        <div class="darken-layer flex items-center justify-center">
+          <p class="text-2xl">PROMOÇÕES</p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</app-navbar>
