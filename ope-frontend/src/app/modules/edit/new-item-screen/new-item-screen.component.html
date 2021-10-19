@@ -1,0 +1,56 @@
+<app-navbar>
+  <ng-container main>
+    <div [formGroup]="form" class="m-4">
+        <div (click)='fileInputOpen()' class="cursor-pointer">
+          <div class="w-24 h-24 bg-gray-500">
+            <img class="object-cover h-24 w-full" *ngIf="preview" [src]="preview">
+          </div>
+          <mat-toolbar>
+            <input  class="cursor-pointer" matInput [value]="name === '' ? 'Selecionar arquivo' : name" />
+          </mat-toolbar>
+
+          <form method="post"
+                enctype="multipart/form-data"
+                id="fileForm">
+          <input
+            type="file"
+            id="fileInput"
+            name="fileInput"
+            accept="image/*" multiple
+            (change)="selectFiles($event)"
+          />
+        </form>
+        </div>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Nome do produto</mat-label>
+          <input formControlName="name" name="name" class="w-full" matInput type="text" >
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Descrição</mat-label>
+          <input formControlName="description" name="desc" class="w-full" matInput type="text" >
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Preço</mat-label>
+          <input formControlName="price" name="price" class="w-full" matInput type="text" currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"/>
+        </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Tipo do produto</mat-label>
+              <mat-select formControlName="category">
+                <mat-option value='1'>Prato</mat-option>
+                <mat-option value='2'>Lanche</mat-option>
+                <mat-option value='3'>Bebida/sobremesa</mat-option>
+              </mat-select>
+          </mat-form-field>
+
+        <div>
+          <mat-checkbox formControlName="promotion">Ítem promocional</mat-checkbox>
+        </div>
+
+        <button (click)='sendProduct()' mat-button>Salvar produto</button>
+      </div>
+  </ng-container>
+</app-navbar>

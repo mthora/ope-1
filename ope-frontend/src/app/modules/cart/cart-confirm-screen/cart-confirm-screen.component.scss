@@ -3,16 +3,8 @@ button.mat-focus-indicator.mat-button.mat-button-base.goto_menu{
   color: #fff;
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 3rem;
-
-  position: absolute;
-  bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
   text-align: center;
-  width: 80%;
+  width: 100%;
 }
 
 ::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {

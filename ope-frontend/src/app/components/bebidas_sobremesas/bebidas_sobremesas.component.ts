@@ -42,7 +42,7 @@ export class PlatesComponent implements OnInit {
     this._cart.addToCart(this.chosenProducts)
             .subscribe(
                 (response) => {
-                    console.log(response);
+
                 },
                 () => {
                     console.log("deu ruim");

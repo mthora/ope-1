@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/products.service';
 
@@ -8,10 +9,13 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class PromocoesScreenComponent implements OnInit {
 
-  constructor(private _products : ProductsService) { }
+  constructor(private _products : ProductsService, private _auth: AuthService) { }
 
   ngOnInit() {
     this.getProducts();
+    let user = this._auth.getUserId();
+    let userRole = user['role'];
+    this.admin = userRole == 1;
   }
 
   getProducts() : any {
@@ -20,7 +24,7 @@ export class PromocoesScreenComponent implements OnInit {
                 (response) => {
                     console.log(response);
                     this.products = response.data;
-                    this.promocoes = this.products.filter((item)=>item.promotion === true)
+                    this.promocoes = this.products.filter((item)=>item.promotion === true && item.amount > 0)
                 },
                 (response) => {
                     console.log(response);
@@ -28,6 +32,7 @@ export class PromocoesScreenComponent implements OnInit {
             );
   }
 
+  admin = false;
   products: any[] = [];
   promocoes: any[] = [];
 

@@ -13,8 +13,12 @@
     </div>
     <div class="w-full flex align-end justify-between">
       <span class="font-xs">{{plateDescription}}</span>
-      <button mat-button [mat-menu-trigger-for]="addToCart">
+      <button *ngIf="!admin" mat-button [mat-menu-trigger-for]="addToCart">
         <mat-icon>add_shopping_cart</mat-icon>
+      </button>
+
+      <button *ngIf="admin" mat-button>
+        <mat-icon>create</mat-icon>
       </button>
 
       <mat-menu #addToCart>

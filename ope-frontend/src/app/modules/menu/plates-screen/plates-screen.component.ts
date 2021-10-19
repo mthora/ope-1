@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 import { ProductsService } from './../../../services/products.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,10 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlatesScreenComponent implements OnInit {
 
-  constructor(private _products: ProductsService) { }
+  constructor(private _products: ProductsService, private _auth: AuthService, private _router: Router) { }
 
   ngOnInit() {
     this.getProducts();
+    let user = this._auth.getUserId();
+    let userRole = user['role'];
+    this.admin = userRole == 1;
   }
 
   getProducts() : any {
@@ -20,7 +25,7 @@ export class PlatesScreenComponent implements OnInit {
                 (response) => {
                     console.log(response);
                     this.products = response.data;
-                    this.plates = this.products.filter((item)=>item.category=="prato")
+                    this.plates = this.products.filter((item)=>item.category==1 && item.amount > 0)
                 },
                 (response) => {
                     console.log(response);
@@ -28,6 +33,11 @@ export class PlatesScreenComponent implements OnInit {
             );
   }
 
+  navigate(to: string) : void {
+    this._router.navigateByUrl(to);
+  }
+
+  admin = false;
   products: any[] = [];
   plates: any[] = [];
 }

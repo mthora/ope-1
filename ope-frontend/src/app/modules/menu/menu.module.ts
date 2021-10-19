@@ -1,3 +1,4 @@
+import { MatButtonModule } from '@angular/material/button';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SubMenuScreenComponent } from './sub-menu-screen/sub-menu-screen.component';
@@ -20,7 +21,8 @@ import { PromocoesScreenComponent } from './promocoes-screen/promocoes-screen.co
   imports: [
     CommonModule,
     ComponentsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatButtonModule
   ]
 })
 export class MenuModule { }

@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 import { ProductsService } from './../../../services/products.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,19 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Bebidas_SobremesasScreenComponent implements OnInit {
 
-  constructor(private _products: ProductsService) { }
+  constructor(private _products: ProductsService, private _auth: AuthService, private _router: Router) { }
 
   ngOnInit() {
     this.getProducts();
+    let user = this._auth.getUserId();
+    let userRole = user['role'];
+    this.admin = userRole == 1;
   }
 
   getProducts() : any {
     this._products.getProducts()
             .subscribe(
                 (response) => {
-                    console.log(response);
                     this.products = response.data;
-                    this.bebidas_sobremesas = this.products.filter((item)=>item.category=="bebida_sobremesa")
+                    this.bebidas_sobremesas = this.products.filter((item)=>item.category==3 && item.amount > 0)
                 },
                 (response) => {
                     console.log(response);
@@ -28,6 +32,11 @@ export class Bebidas_SobremesasScreenComponent implements OnInit {
             );
   }
 
+  navigate(to: string) : void {
+    this._router.navigateByUrl(to);
+  }
+
+  admin = false;
   products: any[] = [];
   bebidas_sobremesas: any[] = [];
 }

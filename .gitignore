@@ -2,3 +2,4 @@
 /ope-backend/.idea/
 /ope-backend/storage.db
 **/__pycache__
+/ope-backend/src/img/*

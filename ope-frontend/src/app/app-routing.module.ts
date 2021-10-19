@@ -9,12 +9,17 @@ import { PlatesScreenComponent } from './modules/menu/plates-screen/plates-scree
 import { LanchesScreenComponent } from './modules/menu/lanches-screen/lanches-screen.component';
 import { CartConfirmScreenComponent } from './modules/cart/cart-confirm-screen/cart-confirm-screen.component';
 import { Bebidas_SobremesasScreenComponent } from './modules/menu/bebidas_sobremesas-screen/bebidas_sobremesas-screen.component';
+import { NewItemScreenComponent } from './modules/edit/new-item-screen/new-item-screen.component';
 
 const routes: Routes = [
   {path: '', component: HomeScreenComponent },
   {path: 'acesso', component: LoginScreenComponent},
   {path: 'cardapio', children: [
     {path: '', component: SubMenuScreenComponent},
+    {path: 'editar', children: [
+      {path: 'novo', component: NewItemScreenComponent},
+      {path: '**', redirectTo: '/404'}
+    ]},
     {path: 'pratos', component: PlatesScreenComponent},
     {path: 'lanches', component: LanchesScreenComponent},
     {path: 'bebidas_sobremesas', component: Bebidas_SobremesasScreenComponent},

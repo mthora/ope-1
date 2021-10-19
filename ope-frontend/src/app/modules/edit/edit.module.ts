@@ -1,34 +1,39 @@
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NewItemScreenComponent } from './new-item-screen/new-item-screen.component';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { CartConfirmScreenComponent } from './cart-confirm-screen/cart-confirm-screen.component';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { NgxCurrencyModule } from "ngx-currency";
 
 @NgModule({
   declarations: [
-    CartConfirmScreenComponent
+    NewItemScreenComponent
   ],
   imports: [
     CommonModule,
     ComponentsModule,
     MatSidenavModule,
-    MatIconModule,
-    MatButtonModule,
-    MatRadioModule,
     MatFormFieldModule,
+    MatToolbarModule,
     MatSelectModule,
     MatInputModule,
+    MatButtonModule,
+    MatCheckboxModule,
     FormsModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxCurrencyModule
+  ],
+  exports: [
+    NewItemScreenComponent
   ]
 })
-export class CartModule { }
+export class EditModule { }
