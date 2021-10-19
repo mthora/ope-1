@@ -13,7 +13,7 @@ class Products(Base):
     price = Column(Float)
     amount = Column(Integer)
     promotion = Column(Boolean)
-    img = Column(String(400))
+    img = Column(String(400), nullable=True)
     products_orders = relationship("Products_Orders", back_populates="products")
 
     def to_dict(self):

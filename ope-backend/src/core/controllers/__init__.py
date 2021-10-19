@@ -12,6 +12,7 @@ from .product_controllers.list_products_controller import ListProductsController
 from .product_controllers.delete_product_controller import DeleteProductController
 from .product_controllers.update_product_controller import UpdateProductController
 from .product_controllers.remove_amount_controller import RemoveAmountController
+from .product_controllers.upload_image_controller import UploadImageController
 
 # ProductOrderControllers
 from .product_order_controllers.create_product_order_controller import CreateProduct_OrderController

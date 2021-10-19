@@ -16,11 +16,12 @@
       plateDescription="{{i.description.substring(0, 60)}}"
       plateImage="{{i.img}}"
       [maxAmount]="i.amount"
+      [admin]="admin"
     >
     </app-plates>
 
     <h2 *ngIf="plates.length === 0">Este menu está vazio!</h2>
-
+    <button (click)='navigate("cardapio/editar/novo")' *ngIf="admin" mat-button>Novo ítem</button>
   </div>
   </ng-container>
 </app-navbar>

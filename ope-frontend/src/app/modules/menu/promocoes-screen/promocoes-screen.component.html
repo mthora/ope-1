@@ -16,11 +16,11 @@
       plateDescription="{{i.description.substring(0, 60)}}"
       plateImage="{{i.img}}"
       [maxAmount]="i.amount"
+      [admin]="admin"
     >
     </app-plates>
 
     <h2 *ngIf="promocoes.length === 0">Este menu está vazio!</h2>
-
   </div>
   </ng-container>
 </app-navbar>

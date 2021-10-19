@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/products.service';
 
@@ -8,10 +9,13 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class PromocoesScreenComponent implements OnInit {
 
-  constructor(private _products : ProductsService) { }
+  constructor(private _products : ProductsService, private _auth: AuthService) { }
 
   ngOnInit() {
     this.getProducts();
+    let user = this._auth.getUserId();
+    let userRole = user['role'];
+    this.admin = userRole == 1;
   }
 
   getProducts() : any {
@@ -28,6 +32,7 @@ export class PromocoesScreenComponent implements OnInit {
             );
   }
 
+  admin = false;
   products: any[] = [];
   promocoes: any[] = [];
 

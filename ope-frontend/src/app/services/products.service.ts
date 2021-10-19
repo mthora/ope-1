@@ -12,6 +12,31 @@ export class ProductsService {
   private _urlProducts: string = `${environment.urlServer}products/`
   constructor(private _httpClient: HttpClient, private _auth: AuthService) { }
 
+  createProduct(form : any) : Observable<any> {
+    return this._httpClient.post(this._urlProducts, form, {headers: new HttpHeaders()
+      .set('Authorization', `${this._auth.accessToken}`)})
+      .pipe(
+        switchMap((response: any) => {
+            console.log(response);
+            return of(response.data);
+        })
+    );
+  }
+
+  uploadImage(file: any, product_id: number) : Observable<any> {
+    let formData: FormData = new FormData();
+    formData.append('files', file)
+    console.log("formData",formData);
+    return this._httpClient.post(`${this._urlProducts}img/${product_id}`, formData, {headers: new HttpHeaders()
+      .set('Authorization', `${this._auth.accessToken}`)})
+      .pipe(
+        switchMap((response: any) => {
+            console.log(response);
+            return of(response.data);
+        })
+    );
+  }
+
   getProducts(): Observable<any> {
     return this._httpClient.get(this._urlProducts, {headers: new HttpHeaders()
       .set('Authorization', `Bearer ${this._auth.accessToken}`)})

@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 
@@ -8,11 +9,22 @@ import { Component, HostListener, Input, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private _auth: AuthService) { }
 
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
+    this.admin = this._auth.getUserId()['role'] === 1
   }
+
+  signOut(){
+    this._auth.signOut().subscribe(
+      () => {
+        window.location.reload();
+      }
+    );
+  }
+
+  admin = false;
   containerShows: boolean = false;
   innerWidth: any;
 

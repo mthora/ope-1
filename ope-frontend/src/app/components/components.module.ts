@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuHeaderComponent } from './menu-header/menu-header.component';
 import { OrderComponent } from './order/order.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { OrderComponent } from './order/order.component';
     MatMenuModule,
     FormsModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   exports: [
     NavbarComponent,

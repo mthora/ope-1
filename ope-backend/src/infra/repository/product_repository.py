@@ -1,16 +1,16 @@
 from sqlalchemy.exc import IntegrityError, NoResultFound, MultipleResultsFound
 from src.infra.config import DBConnectionHandler
 from src.infra.db_entities import Products as Product
-
+from flask import current_app as app
+import os
 
 class ProductRepository:
-
     @classmethod
-    def create_product(cls, name: str, category: int, description: str, price: float, amount: int, promotion: bool, img: str):
+    def create_product(cls, name: str, category: int, description: str, price: float, amount: int, promotion: bool):
         with DBConnectionHandler() as db:
             try:
                 new_product = Product(name=name, category=category, description=description, price=price, amount=amount,
-                                      promotion=promotion, img=img)
+                                      promotion=promotion, img=None)
                 db.session.add(new_product)
                 db.session.commit()
                 return {
@@ -108,6 +108,27 @@ class ProductRepository:
                 return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
             finally:
                 db.session.close()
+
+    def upload_image(self, product_id: int, img_file):
+        with DBConnectionHandler() as db:
+            try:
+                product = db.session.query(Product).filter_by(id=product_id).first()
+                path = app.config['UPLOAD_FOLDER']
+                name = f"{img_file.filename}"
+                img_file.save(os.path.join(path, name))
+                image_path = os.path.join(path, name)
+                if product:
+                    product.img = image_path
+                    db.session.commit()
+                    return {"data": None, "status": 200, "errors": []}
+                return {"data": None, "status": 404, "errors": [f"Product de id {product_id} não existe"]}
+            except Exception as ex:
+                print(ex)
+                db.session.rollback()
+                return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
+            finally:
+                db.session.close()
+
 
     def remove_product_amount(self,
                         product_id: int,

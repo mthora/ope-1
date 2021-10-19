@@ -1,3 +1,4 @@
+import { EditModule } from './modules/edit/edit.module';
 import { CartModule } from './modules/cart/cart.module';
 import { MenuModule } from './modules/menu/menu.module';
 import { ComponentsModule } from './components/components.module';
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeModule,
     MenuModule,
     CartModule,
+    EditModule,
     BrowserAnimationsModule,
     ComponentsModule,
     HttpClientModule

@@ -4,8 +4,7 @@ def create_product_validation(
         category: str,
         price: float,
         amount: int,
-        promotion: bool,
-        img: str):
+        promotion: bool):
     message: list[str] = []
     if not isinstance(name, str) or name is None or len(name) > 40 or name == "":
         message.append("Nome inválido")
@@ -19,6 +18,4 @@ def create_product_validation(
         message.append("Quantidade inválida")
     if not isinstance(promotion, bool) or promotion is None:
         message.append("Informação inválida")
-    if not isinstance(img, str) or img is None:
-        message.append("Imagem obrigatória")
     return message

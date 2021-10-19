@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { CartService } from './../../services/cart.service';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PlatesComponent implements OnInit {
 
-  constructor(private _cart: CartService) { }
+  constructor(private _cart: CartService, private _auth: AuthService) { }
 
   ngOnInit() {
   }
@@ -19,6 +20,7 @@ export class PlatesComponent implements OnInit {
   @Input() platePrice: string = '';
   @Input() maxAmount: number = 10;
   @Input() productId: number = 0;
+  @Input() admin: boolean = false;
 
   plateAmount:number = 1;
   chosenProducts: any;

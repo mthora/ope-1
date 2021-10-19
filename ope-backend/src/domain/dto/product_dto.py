@@ -7,6 +7,5 @@ Product = {
     'category': fields.Integer(required=True),
     'price': fields.Float(required=True),
     'amount': fields.Integer(required=True),
-    'promotion': fields.Boolean(Required=True),
-    'img': fields.FormattedString(src_str="")
+    'promotion': fields.Boolean(Required=True)
 }
