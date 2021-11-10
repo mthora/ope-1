@@ -2,6 +2,7 @@ from sqlalchemy.exc import IntegrityError, NoResultFound, MultipleResultsFound
 from src.infra.config import DBConnectionHandler
 from src.infra.db_entities import Products as Product
 from flask import current_app as app
+import base64
 import os
 
 class ProductRepository:
@@ -118,7 +119,9 @@ class ProductRepository:
                 img_file.save(os.path.join(path, name))
                 image_path = os.path.join(path, name)
                 if product:
-                    product.img = image_path
+                    with open(image_path, 'rb') as img_file:
+                        image = base64.b64encode(img_file.read())
+                    product.img = image.decode('utf-8')
                     db.session.commit()
                     return {"data": None, "status": 200, "errors": []}
                 return {"data": None, "status": 404, "errors": [f"Product de id {product_id} não existe"]}
@@ -129,6 +132,24 @@ class ProductRepository:
             finally:
                 db.session.close()
 
+    def get_image(self, product_id: int):
+        with DBConnectionHandler() as db:
+            try:
+                product = db.session.query(Product).filter_by(id=product_id).first()
+                if product:
+                    image_name = product.img.split('\\')[2]
+                    image_path = os.path.join(app.config['UPLOAD_FOLDER'], image_name)
+                    print(image_path)
+                    with open(image_path, 'rb') as img_file:
+                        image = base64.b64encode(img_file.read())
+                    return {"data": image.decode("utf-8"), "status": 200, "errors": []}
+                return {"data": None, "status": 404, "errors": [f"Product de id {product_id} não existe"]}
+            except Exception as ex:
+                print(ex)
+                db.session.rollback()
+                return {"data": None, "status": 500, "errors": ["Algo deu errado na conexão com o banco de dados"]}
+            finally:
+                db.session.close()
 
     def remove_product_amount(self,
                         product_id: int,

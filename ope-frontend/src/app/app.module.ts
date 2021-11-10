@@ -1,3 +1,4 @@
+import { AdminOrdersModule } from './modules/admin-orders/admin-orders.module';
 import { EditModule } from './modules/edit/edit.module';
 import { CartModule } from './modules/cart/cart.module';
 import { MenuModule } from './modules/menu/menu.module';
@@ -13,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     EditModule,
     BrowserAnimationsModule,
     ComponentsModule,
-    HttpClientModule
+    HttpClientModule,
+    AdminOrdersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,7 +14,7 @@
       plateName="{{i.name}}"
       platePrice="{{i.price}}"
       plateDescription="{{i.description.substring(0, 60)}}"
-      plateImage="{{i.img}}"
+      [plateImage]="decodeImg(i.img)"
       [maxAmount]="i.amount"
       [admin]="admin"
     >

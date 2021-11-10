@@ -1,3 +1,4 @@
+import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { ProductsService } from './../../../services/products.service';
@@ -10,7 +11,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlatesScreenComponent implements OnInit {
 
-  constructor(private _products: ProductsService, private _auth: AuthService, private _router: Router) { }
+  constructor(private _products: ProductsService, private domSanitizer: DomSanitizer,
+    private _auth: AuthService, private _router: Router) { }
 
   ngOnInit() {
     this.getProducts();
@@ -36,6 +38,13 @@ export class PlatesScreenComponent implements OnInit {
   navigate(to: string) : void {
     this._router.navigateByUrl(to);
   }
+
+  decodeImg(dataURI: string) {
+    let imageblob = atob(btoa(dataURI));
+    let image = this.domSanitizer.bypassSecurityTrustUrl(`data:image/png;base64, ${imageblob}`);
+    console.log('i', image)
+    return image
+   }
 
   admin = false;
   products: any[] = [];
