@@ -1,6 +1,7 @@
 from sqlalchemy.exc import IntegrityError, NoResultFound, MultipleResultsFound
 from src.infra.config import DBConnectionHandler
 from src.infra.db_entities import Products_Orders as Product_Order
+from src.infra.db_entities import Products
 
 
 class Product_OrderRepository:
@@ -9,7 +10,8 @@ class Product_OrderRepository:
     def create_product_order(cls, product_id: int, order_id: int, price: float, amount: int):
         with DBConnectionHandler() as db:
             try:
-                new_product_order = Product_Order(product_id=product_id, order_id=order_id, price=price, amount=amount)
+                product = db.session.query(Products).filter_by(id=product_id).first()
+                new_product_order = Product_Order(product_id=product_id, name=product.name, order_id=order_id, price=price, amount=amount)
                 db.session.add(new_product_order)
                 db.session.commit()
                 return {

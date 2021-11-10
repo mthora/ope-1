@@ -1,3 +1,4 @@
+import { DomSanitizer } from '@angular/platform-browser';
 import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/products.service';
@@ -9,7 +10,7 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class PromocoesScreenComponent implements OnInit {
 
-  constructor(private _products : ProductsService, private _auth: AuthService) { }
+  constructor(private _products : ProductsService, private _auth: AuthService, private domSanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this.getProducts();
@@ -31,6 +32,13 @@ export class PromocoesScreenComponent implements OnInit {
                 }
             );
   }
+
+  decodeImg(dataURI: string) {
+    let imageblob = atob(btoa(dataURI));
+    let image = this.domSanitizer.bypassSecurityTrustUrl(`data:image/png;base64, ${imageblob}`);
+    console.log('i', image)
+    return image
+   }
 
   admin = false;
   products: any[] = [];

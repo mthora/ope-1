@@ -1,3 +1,5 @@
+import { InProgressComponent } from './modules/admin-orders/in-progress/in-progress.component';
+import { MyOrdersComponent } from './modules/home/my-orders/my-orders.component';
 import { PromocoesScreenComponent } from './modules/menu/promocoes-screen/promocoes-screen.component';
 import { SubMenuScreenComponent } from './modules/menu/sub-menu-screen/sub-menu-screen.component';
 import { LoginScreenComponent } from './modules/home/login-screen/login-screen.component';
@@ -29,8 +31,11 @@ const routes: Routes = [
     {path: '', component: CartConfirmScreenComponent}
   ]},
 
+  {path: 'meus-pedidos', component: MyOrdersComponent},
+  {path: 'pedidos', component: InProgressComponent},
   {path: '404', component: NotFoundComponent},
-  {path: '**', redirectTo: '/404'}
+  {path: '**', redirectTo: '/404'},
+
 ];
 
 @NgModule({

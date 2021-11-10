@@ -1,0 +1,28 @@
+<app-navbar>
+  <ng-container main>
+    <div class="h-full flex flex-col items-center mt-4">
+      <div *ngIf="order != null">
+        <h1>Último pedido: </h1>
+        <h2>
+          Número do pedido: <span>{{order}}</span>
+        </h2>
+        <h2>Ítens no pedido:</h2>
+        <ul *ngFor="let item of orderList" class="mb-4 text-center border-solid border-2 border-gray-900">
+          <li>
+            Produto: {{item.name}}
+          </li>
+          <li>
+            Quantidade: <span>{{item.amount}}</span>
+          </li>
+          <li>
+            Preço: <span>{{item.price}}</span>
+          </li>
+        </ul>
+        <h2>Total: <span> {{total}} </span> </h2>
+      </div>
+      <div *ngIf="order == null">
+        Você não tem pedidos em andamento
+      </div>
+    </div>
+  </ng-container>
+</app-navbar>

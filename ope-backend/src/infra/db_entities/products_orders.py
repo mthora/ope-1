@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, Float, ForeignKey
+from sqlalchemy import Column, Integer, Float, ForeignKey, String
 from src.infra.config import Base
 from sqlalchemy.orm import relationship
 
@@ -16,10 +16,12 @@ class Products_Orders(Base):
     price = Column(Float, nullable=False)
     amount = Column(Integer, nullable=False)
 
+    name = Column(String(100), nullable=False)
 
     def to_dict(self):
         return {
             "id": self.id,
+            "name": self.name,
             "product_id": self.product_id,
             "order_id": self.order_id,
             "price": self.price,

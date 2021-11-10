@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuHeaderComponent } from './menu-header/menu-header.component';
 import { OrderComponent } from './order/order.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CurrentOrderComponent } from './current-order/current-order.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     PlatesComponent,
     MenuHeaderComponent,
     OrderComponent,
-    OrderComponent
+    OrderComponent,
+    CurrentOrderComponent
   ],
   imports: [
     CommonModule,
@@ -55,7 +57,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     LoginComponent,
     MenuHeaderComponent,
     OrderComponent,
-    PlatesComponent
+    PlatesComponent,
+    CurrentOrderComponent
   ]
 })
 export class ComponentsModule { }

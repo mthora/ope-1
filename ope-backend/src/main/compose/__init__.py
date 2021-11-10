@@ -11,6 +11,7 @@ from .product.list_products_composer import list_products_composer
 from .product.delete_product_composer import delete_product_composer
 from .product.remove_amount_composer import remove_amount_composer
 from .product.upload_image_composer import upload_image_composer
+from .product.get_image_composer import get_image_composer
 
 # ProductOrderComposers
 from .product_order.create_product_order_composer import create_product_order_composer

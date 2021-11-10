@@ -53,6 +53,7 @@ export class CartConfirmScreenComponent implements OnInit {
   sumList: any[] = [];
   orderSum: number = 0;
   tip: number = 0;
+  id = null;
 
   deliveryOptions = [{desc: "Entrega na mesa", id: 1}, {desc:"Retirar no local", id: 2}]
 
@@ -65,6 +66,7 @@ export class CartConfirmScreenComponent implements OnInit {
     this.cart.sendOrder(order)
     .subscribe(
       (response) => {
+        this.id = response.id;
         let listOfObservables: any[] = []
             for (let i of this.cart.order) {
               listOfObservables.push(
@@ -79,6 +81,13 @@ export class CartConfirmScreenComponent implements OnInit {
         forkJoin(listOfObservables).subscribe(
           (res) => {
             console.log(res);
+            let previousOrder = localStorage.getItem('order-id');
+            if (previousOrder == null) {
+              localStorage.setItem('order-id', JSON.stringify(this.id))
+            } else {
+              localStorage.removeItem('order-id');
+              localStorage.setItem('order-id', JSON.stringify(this.id));
+            }
             this.cart.emptyCart();
             window.location.reload();
           },

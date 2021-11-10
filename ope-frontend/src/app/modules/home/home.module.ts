@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 
 @NgModule({
   declarations: [
     HomeScreenComponent,
-    LoginScreenComponent
+    LoginScreenComponent,
+    MyOrdersComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { LoginScreenComponent } from './login-screen/login-screen.component';
   ],
   exports: [
     HomeScreenComponent,
-    LoginScreenComponent
+    LoginScreenComponent,
+    MyOrdersComponent
   ]
 })
 export class HomeModule { }

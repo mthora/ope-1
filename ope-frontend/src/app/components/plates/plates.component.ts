@@ -14,7 +14,7 @@ export class PlatesComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Input() plateImage: string = '';
+  @Input() plateImage: any;
   @Input() plateName: string = '';
   @Input() plateDescription: string = '';
   @Input() platePrice: string = '';

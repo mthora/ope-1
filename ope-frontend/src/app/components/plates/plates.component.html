@@ -1,6 +1,6 @@
 <div class="h-32 w-5/6 flex mb-8 shadow-sm bg-white">
   <div class="h-32 w-32">
-    <img class="h-full object-cover" src={{plateImage}}>
+    <img class="h-full object-cover" [src]="plateImage">
   </div>
   <div class="w-full flex flex-col justify-around p-4">
     <div class="flex justify-between">
@@ -16,11 +16,11 @@
       <button *ngIf="!admin" mat-button [mat-menu-trigger-for]="addToCart">
         <mat-icon>add_shopping_cart</mat-icon>
       </button>
-
-      <button *ngIf="admin" mat-button>
-        <mat-icon>create</mat-icon>
-      </button>
-
+<!--
+  <button *ngIf="admin" mat-button>
+    <mat-icon>create</mat-icon>
+  </button>
+-->
       <mat-menu #addToCart>
         <div class="p-4">
         <div class="mb-4">

@@ -13,6 +13,7 @@ from .product_use_cases.delete_product_use_case import DeleteProduct
 from .product_use_cases.update_product_use_case import UpdateProduct
 from .product_use_cases.remove_amount_use_case import RemoveAmount
 from .product_use_cases.upload_image_use_case import UploadImage
+from .product_use_cases.get_image import GetImage
 
 # ProductOrderUseCases
 from .product_order_use_cases.create_product_order_use_case import CreateProduct_Order

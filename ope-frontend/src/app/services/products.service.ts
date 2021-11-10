@@ -37,6 +37,15 @@ export class ProductsService {
     );
   }
 
+  getImage(product_id: number): Observable<any> {
+    return this._httpClient.get(`${this._urlProducts}img/${product_id}`, {responseType: 'text'})
+      .pipe(
+        switchMap((response)=>{
+          return of(response);
+        })
+      )
+  }
+
   getProducts(): Observable<any> {
     return this._httpClient.get(this._urlProducts, {headers: new HttpHeaders()
       .set('Authorization', `Bearer ${this._auth.accessToken}`)})
