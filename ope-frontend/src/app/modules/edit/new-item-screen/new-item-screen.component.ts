@@ -48,8 +48,33 @@ export class NewItemScreenComponent implements OnInit {
       'description': this.form.value.description,
       'category': parseInt(this.form.value.category),
       'amount': this.form.value.amount,
-      'price': this.form.value.price,
+      'price': this.form.value.price.toFixed(2),
       'promotion': this.form.value.promotion
+    }
+
+    if (dataToSend['name'] == '' || dataToSend['name'] == null){
+      alert("Form inválido")
+      return;
+    }
+
+    if (dataToSend['description'] == '' || dataToSend['description'] == null){
+      alert("Form inválido")
+      return;
+    }
+
+    if (dataToSend['category'] == 0 || dataToSend['category'] == null){
+      alert("Form inválido")
+      return;
+    }
+
+    if (parseFloat(dataToSend['price']) <= 0){
+      alert("Form inválido")
+      return;
+    }
+
+    if (this.selectedFile == null){
+      alert("A foto do produto é obrigatória")
+      return;
     }
 
     let id: any;

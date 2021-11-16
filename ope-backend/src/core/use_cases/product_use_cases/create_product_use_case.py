@@ -16,12 +16,12 @@ class CreateProduct:
             name=name,
             description=description,
             category=category,
-            price=price,
+            price=float(price),
             amount=amount,
             promotion=promotion)
         input_is_valid = len(invalid_inputs) == 0
         if input_is_valid:
-            response = self.item_repository.create_product(name=name, category=category, description=description, price=price, amount=amount,
+            response = self.item_repository.create_product(name=name, category=category, description=description, price=float(price), amount=amount,
                                                         promotion=promotion)
             return response
         return {"data": None, "status": 400, "errors": invalid_inputs}

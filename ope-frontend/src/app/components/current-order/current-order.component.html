@@ -13,8 +13,8 @@
       </li>
     </ul>
     <p>Local: {{orderLocal == '1' ? 'Local' : 'Viagem'}}</p>
-    <p>Data: {{orderDate | date :'short'}}</p>
-    <p>Método de pagamento: {{orderPayment}}</p>
+    <p>Data: {{orderDate | date:'dd/MM/yyyy HH:mm:ss'}}</p>
+    <p>Método de pagamento: {{orderPayment | payment}}</p>
     <p>Observações: {{orderObs}}</p>
     <p>Confirmado: {{orderConfirmed?'Sim':'Não'}}</p>
     <p>Preço total: {{total}} </p>
