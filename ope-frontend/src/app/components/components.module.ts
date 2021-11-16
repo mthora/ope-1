@@ -19,6 +19,7 @@ import { MenuHeaderComponent } from './menu-header/menu-header.component';
 import { OrderComponent } from './order/order.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CurrentOrderComponent } from './current-order/current-order.component';
+import { PaymentPipe } from './current-order/payment.pipe';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { CurrentOrderComponent } from './current-order/current-order.component';
     MenuHeaderComponent,
     OrderComponent,
     OrderComponent,
-    CurrentOrderComponent
+    CurrentOrderComponent,
+    PaymentPipe
   ],
   imports: [
     CommonModule,
