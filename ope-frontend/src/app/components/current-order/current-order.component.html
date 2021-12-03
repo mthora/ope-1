@@ -1,0 +1,27 @@
+<div class="m-4 p-2 bg-gray-200 border-solid border-2 border-gray-900">
+  <div *ngIf="orderNumber != null">
+    <h1>Número do pedido: {{orderNumber}}</h1>
+    <ul *ngFor="let item of orderList" class="mb-4 text-center">
+      <li>
+        Produto: {{item.name}}
+      </li>
+      <li>
+        Quantidade: <span>{{item.amount}}</span>
+      </li>
+      <li>
+        Preço: R$<span>{{item.price}}</span>
+      </li>
+    </ul>
+    <p>Local: {{orderLocal == '1' ? 'Mesa' : 'Viagem'}}</p>
+    <p>Data: {{orderDate | date:'dd/MM/yyyy HH:mm:ss' : '+0000'}}</p>
+    <p>Método de pagamento: {{orderPayment | payment}}</p>
+    <p>Observações: {{orderObs}}</p>
+    <p>Confirmado: {{orderConfirmed?'Sim':'Não'}}</p>
+    <p>Preço total: R${{total}} </p>
+    <button *ngIf="!orderConfirmed" mat-button (click)='confirm(orderNumber)'>Confirmar pedido</button>
+    <button *ngIf="orderConfirmed" mat-button (click)='end(orderNumber)'>Concluir pedido</button>
+  </div>
+  <div *ngIf="orderNumber == null">
+    Nenhum pedido em andamento!
+  </div>
+</div>

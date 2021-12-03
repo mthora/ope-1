@@ -1,0 +1,30 @@
+<app-navbar>
+  <ng-container main>
+  <div class="flex flex-col items-center justify-center w-full" >
+    <app-menu-header
+      title="BEBIDAS E SOBREMESAS"
+      headerImage = "https://www.publicdomainpictures.net/pictures/230000/nahled/chocolate-ice-cream-dessert.jpg"
+      class="w-full flex flex-col items-center justify-center mt-4 mb-8"
+      >
+    </app-menu-header>
+
+    <app-plates class="w-full flex flex-col items-center justify-center"
+      [productId]="i.id"
+      *ngFor="let i of bebidas_sobremesas"
+      plateName="{{i.name}}"
+      platePrice="{{i.price}}"
+      plateDescription="{{i.description.substring(0, 60)}}"
+      [plateImage]="decodeImg(i.img)"
+      [maxAmount]="i.amount"
+      [admin]='admin'
+    >
+    </app-plates>
+
+    <mat-spinner *ngIf="loading===true"></mat-spinner>
+
+    <h2 *ngIf="(bebidas_sobremesas.length === 0 && loading === false)">Este menu está vazio!</h2>
+
+    <button *ngIf="admin" (click)='navigate("cardapio/editar/novo")' mat-button>Novo ítem</button>
+  </div>
+  </ng-container>
+</app-navbar>

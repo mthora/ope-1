@@ -1,0 +1,19 @@
+<app-navbar>
+  <ng-container main>
+    <div *ngIf="filteredOrderList != null && filteredOrderList.length != 0">
+      <h1>Pedidos em andamento:</h1>
+      <app-current-order *ngFor="let order of filteredOrderList.reverse()"
+        [orderNumber]="order.id?order.id:null"
+        [orderLocal]="order.consumed_in"
+        [orderDate]="order.initial_date"
+        [orderPayment]="order.payment_method"
+        [orderConfirmed]="order.confirmed"
+        [orderObs]="order.obs"
+      >
+      </app-current-order>
+    </div>
+    <div class="flex items-center justify-center h-full" *ngIf="filteredOrderList == null || filteredOrderList.length == 0">
+      <p>Nenhum pedido em andamento</p>
+    </div>
+  </ng-container>
+</app-navbar>

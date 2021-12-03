@@ -1,0 +1,51 @@
+<mat-sidenav-container fixedInViewport="true" class="h-full">
+  <div *ngIf="innerWidth <= 768" class="bg-black text-white w-full h-12 flex justify-between items-center z-1">
+    <button mat-button class="h-12" (click)="drawer.toggle();">
+      <mat-icon class="text-white">menu</mat-icon>
+    </button>
+
+    <button *ngIf="!admin" (click)='navigate("carrinho")' mat-button class="h-12">
+      <mat-icon class="text-white">shopping_cart</mat-icon>
+    </button>
+</div>
+
+<div *ngIf="innerWidth > 768" class="bg-black text-white w-full h-24 flex justify-center items-center z-1">
+
+  <button [routerLink]="''" mat-button class="flex items-center h-12">
+    <mat-icon class="text-white">fastfood</mat-icon>
+  </button>
+
+  <button (click)='navigate("cardapio")' mat-button class="flex items-center h-12">
+    <mat-icon class="text-white">restaurant_menu</mat-icon>
+  </button>
+
+  <button *ngIf="!admin" (click)='navigate("carrinho")' mat-button class="flex items-center h-12">
+    <mat-icon class="text-white">shopping_cart</mat-icon>
+  </button>
+
+  <button (click)='signOut()' *ngIf="admin" class="menu-option" mat-button class="flex items-center h-12">
+    <mat-icon class="text-white">logout</mat-icon>
+    </button>
+
+    <button (click)='navigate("acesso")' *ngIf="!admin" class="menu-option" mat-button class="flex items-center h-12">
+      <mat-icon class="text-white">login</mat-icon>
+    </button>
+
+</div>
+
+  <mat-sidenav #drawer class="sidenav bg-black h-screen w-3/5 text-white flex flex-col justify-between"
+                mode="over" [opened]='false'>
+      <ul class="menu-list uppercase ml-4">
+        <li [routerLink]="''" class="menu-option">Início</li>
+        <li *ngIf="!admin" class="menu-option"><a (click)='navigate("cardapio")'>Cardápio</a></li>
+        <li *ngIf="admin" class="menu-option"><a (click)='navigate("cardapio")'>Editar cardápio</a></li>
+        <li *ngIf="!admin" class="menu-option"><a (click)='navigate("carrinho")'>Carrinho</a></li>
+        <li *ngIf="admin" class="menu-option"><a (click)='navigate("pedidos")'>Pedidos</a></li>
+        <li *ngIf="!admin" class="menu-option"><a (click)='navigate("meus-pedidos")'>Meu pedido</a></li>
+        <li *ngIf="admin" class="menu-option"><a (click)='signOut()'>Sair</a></li>
+        <li *ngIf="!admin" class="menu-option"><a (click)='navigate("acesso")'>Entrar</a></li>
+      </ul>
+  </mat-sidenav>
+
+  <ng-content select="[main]"></ng-content>
+</mat-sidenav-container>

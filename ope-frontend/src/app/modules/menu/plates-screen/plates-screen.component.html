@@ -1,0 +1,28 @@
+<app-navbar>
+  <ng-container main>
+  <div class="flex flex-col items-center justify-center w-full" >
+    <app-menu-header
+      title="PRATOS"
+      headerImage = "http://www.restaurantefrutosdaterra.com.br/wp-content/uploads/2017/11/A-Historia-da-Lasanha-frutos-da-terra.jpg"
+      class="w-full flex flex-col items-center justify-center mt-4 mb-8"
+      >
+    </app-menu-header>
+
+    <app-plates class="cursor-pointer w-full flex flex-col items-center justify-center"
+      [productId]="i.id"
+      *ngFor="let i of plates"
+      plateName="{{i.name}}"
+      platePrice="{{i.price}}"
+      plateDescription="{{i.description.substring(0, 60)}}"
+      [plateImage]="decodeImg(i.img)"
+      [maxAmount]="i.amount"
+      [admin]="admin"
+    >
+    </app-plates>
+
+    <mat-spinner *ngIf="loading===true"></mat-spinner>
+    <h2 *ngIf="plates.length === 0 && loading === false">Este menu está vazio!</h2>
+    <button (click)='navigate("cardapio/editar/novo")' *ngIf="admin" mat-button>Novo ítem</button>
+  </div>
+  </ng-container>
+</app-navbar>

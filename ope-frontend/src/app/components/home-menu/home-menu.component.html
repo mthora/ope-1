@@ -1,0 +1,22 @@
+<div class="home-body flex flex-col items-center justify-center">
+  <div class="sales md:flex mb-8">
+    <img mat-card-image
+         src="https://www.maxpixel.net/static/photo/1x/Sale-Poster-Summer-Lemon-Design-Tropical-6082198.jpg"
+         class="object-cover h-56 w-56 md:h-64 md:w-64 col-start-1 col-end-3 mb-8 md:mr-8"
+         alt="Promoção do dia: frango à parmegiana por R$9,90">
+
+    <img mat-card-image
+         src="https://static-cse.canva.com/blob/669935/1131w-LT01jca-MVo.jpg"
+         class="object-cover h-24 w-56 md:h-64 md:w-64 col-start-1 col-end-3"
+         alt="Promoções 50% de desconto">
+  </div>
+
+  <div class="buttons w-56 flex-col items-center justify-center ">
+    <button (click)='navigate("cardapio")' *ngIf="this._userRole == 1" class="w-full" mat-button>Editar Cardápio</button>
+    <button (click)='navigate("cardapio")' *ngIf="this._userRole != 1" class="w-full" mat-button>Cardápio</button>
+    <button  *ngIf="this._userRole == 1" (click)='navigate("pedidos")' class="w-full" mat-button>Pedidos em andamento</button>
+    <!--<button  *ngIf="this._userRole == 1" class="w-full" mat-button>Relatórios</button>-->
+    <button  *ngIf="this._userRole != 1" class="w-full" mat-button (click)='navigate("carrinho")'>Carrinho</button>
+    <button  *ngIf="this._userRole != 1" class="w-full" mat-button (click)='navigate("meus-pedidos")'>Meu pedido</button>
+  </div>
+</div>

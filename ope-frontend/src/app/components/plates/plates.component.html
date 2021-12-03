@@ -1,0 +1,48 @@
+<div class="h-32 w-5/6 flex mb-8 shadow-sm bg-white">
+  <div class="h-32 w-32">
+    <img class="h-full object-cover" [src]="plateImage">
+  </div>
+  <div class="w-full flex flex-col justify-around p-4">
+    <div class="flex justify-between">
+      <span class="font-sm font-bold">
+        {{plateName}}
+      </span>
+      <span class="font-sm font-bold">
+        R${{toFloat(platePrice)}}
+      </span>
+    </div>
+    <div class="w-full flex align-end justify-between">
+      <span class="font-xs">{{plateDescription}}</span>
+      <button *ngIf="!admin" mat-button [mat-menu-trigger-for]="addToCart">
+        <mat-icon>add_shopping_cart</mat-icon>
+      </button>
+
+    <button (click)='deleteProduct($event)' *ngIf="admin" mat-button>
+      <mat-icon>delete</mat-icon>
+    </button>
+
+      <mat-menu #addToCart>
+        <div class="p-4">
+        <div class="mb-4">
+          <span>
+            Quantidade
+          </span>
+          <span>
+            <button (click)="removeAmount($event)" mat-button>
+              <mat-icon>remove</mat-icon>
+            </button>
+            <span class="p-2">{{plateAmount}}</span>
+            <button (click)="addAmount($event)" mat-button>
+              <mat-icon>add</mat-icon>
+            </button>
+          </span>
+        </div>
+          <button [ngClass]="{'bg-red': this.plateAmount == 0}" (click)="updateCart()" class="add_btn w-full mt-2" mat-button>
+            {{this.plateAmount == 0? "Remover do carrinho" : "Adicionar ao carrinho" }}
+          </button>
+        </div>
+      </mat-menu>
+    </div>
+
+  </div>
+</div>
